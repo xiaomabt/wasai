@@ -451,3 +451,13 @@ main .fix>img{
 main .fix a img{
 	margin-top: 10px;
 }
+main #guding a{
+	display: block;
+	width: 218px;
+	height: 577px;
+	position: fixed;
+	left: 10px;
+	bottom:130px;
+	background: url(../img/869348560b63fd8471d6b6679899fc73.png) no-repeat;
+	
+}
