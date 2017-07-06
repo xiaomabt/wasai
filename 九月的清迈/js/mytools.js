@@ -76,6 +76,16 @@
 	      	//  console.log(scrollTop)
 	        $("body").animate({scrollTop: '-0px'}, "slow");
 		});
+		//QQ
+		$('.qqzx').mouseenter(function(){
+			$('.qqzx').animate({'bottom':'220px'},'slow');
+		});
+		$('.qqzx').mouseleave(function(){
+			$('.qqzx').animate({'bottom':'200px'},'slow');
+		});
+		
+		
+		
 		
 	});
 	function $q(id){

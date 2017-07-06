@@ -354,6 +354,7 @@ main .new_hat .detail{
 	height: 463px;
 	margin-left: 30px;
 	margin-top: 20px;
+	position: relative;
 }
 main .new_hat .detail h2{
 	font-size: 18px;
@@ -390,6 +391,29 @@ main .new_hat .detail .yunfei img{
 	margin-bottom: 3px;
 	cursor: pointer;
 }
+main .new_hat .detail #beijing_1{
+	position: absolute;
+	width: 200px;
+	height: 180px;
+	background: #eee;
+	left: 250px;
+	top: 150px;
+	display: none;
+	box-shadow: 0 0 5px;
+}
+main .new_hat .detail #beijing_1 #beijing_2{
+	margin: 5px;
+	cursor: pointer;
+}
+main .new_hat .detail #beijing_1 ul li{
+	margin: 10px 5px;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+main .new_hat .detail #beijing_1 ul li:hover{
+	border: 1px solid #f60;
+	background: greenyellow;
+}
 main .new_hat .detail .yunfei1{
     margin-top: 20px;
 }
@@ -405,6 +429,33 @@ main .new_hat .detail .yunfei1 .chima a:hover{
     border: 2px solid rgb(119,181,0);
     padding: 0 9px;
     color: #3e3e3e;
+}
+main .new_hat .detail .yunfei1 .chimaa{
+	width: 10px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid rgb(200,201,206);
+    text-align: center;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+main .new_hat .detail .yunfei1 .chima_a{
+	width: 10px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid rgb(200,201,206);
+    text-align: center;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+main .new_hat .detail .yunfei1 .chima_01{
+	width: 10px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid rgb(200,201,206);
+    text-align: center;
+    padding: 1px 10px;
+    cursor: pointer;
 }
 main .new_hat .detail .btn a{
 	width: 260px;

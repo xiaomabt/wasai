@@ -192,10 +192,38 @@
 					   			'height':'37px'
 								});
 		})*/
-	
-	
-	
-	
+	//加减商品数
+	$('.chimaa').click(function(){
+		let num=$('.chima_01').html();
+		if(num==1){
+			$('.chima_01').html(1);
+		}else{
+			$('.chima_01').html(num-1);
+		}
+	})
+	$('.chima_a').click(function(){
+		let num=parseInt($('.chima_01').html());
+		$('.chima_01').html(num+1);
+	})
+	//地址显现隐藏
+	$('#beijing').click(function(){
+		$('#beijing_1').css({'display':'block',
+							 'height':'180px'
+		})
+		
+	})
+	$('#beijing_2').click(function(){
+		$('#beijing_1').animate({'height':'0px'},'slow',function(){
+			$('#beijing_1').css('display','none');
+		});
+	})
+	$('#beijing_3').children().click(function(){
+		$('#beijingg').html($(this).html());
+	})
+	//选择加样式
+	/*$('.chima').click(function(){
+		toogle();
+	})*/
 	
 	
 	
@@ -215,4 +243,8 @@
 		}
 			arr1[date-1].className="";
 	}
-	
+	/*function toogle(){
+		$('.chima').toggle('slow',function(){
+			$('.chima').css('background','red')
+		})
+	}*/

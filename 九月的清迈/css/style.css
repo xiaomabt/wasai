@@ -735,3 +735,9 @@ main .fix>img{
 main .fix a img{
 	margin-top: 10px;
 }
+main .qqzx{
+	position: fixed;
+	left: 0px;
+	bottom: 200px;
+	z-index: 10;
+}
