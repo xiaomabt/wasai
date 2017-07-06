@@ -336,6 +336,7 @@ main .new_hat .hat .box22{
 	top:112px;
 	overflow:hidden;
 	display:none;
+	z-index: 10;
 }
 main .new_hat .hat .box22 .hat11{
 	width: 1260px;
@@ -394,7 +395,7 @@ main .new_hat .detail .yunfei img{
 main .new_hat .detail #beijing_1{
 	position: absolute;
 	width: 200px;
-	height: 180px;
+	height: 195px;
 	background: #eee;
 	left: 250px;
 	top: 150px;

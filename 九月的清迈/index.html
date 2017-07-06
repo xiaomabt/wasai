@@ -322,13 +322,13 @@
 					timer=setInterval(next.onclick,3000);
 				};
 			}*/
-			timer=setInterval(next.onclick,3000);
+			timer=setInterval(next.onclick,2000);
 			container.onmouseover=function(){
 				clearInterval(timer);
 			};
 			container.onmouseout=function(){
 				//填坑！！！这个timer不赋值清不掉定时器
-				timer=setInterval(next.onclick,3000);
+				timer=setInterval(next.onclick,2000);
 			};
 		
 		};
@@ -775,6 +775,90 @@
 					</div>
 				</div>
 			</div>
+			<div id=gamee>
+				<div id="box0">
+				<ul>
+					<li id="li01" class="game0">
+						<dl>
+							<dt class="game1"></dt>
+							<dd>
+								<img src="img/img/11.jpg" alt="" />
+							</dd>
+						</dl>
+					</li>
+					<li id="li02" class="game0">
+						<dl>
+							<dt class="game1"></dt>
+							<dd>
+								<img src="img/img/22.jpg" alt="" />
+							</dd>
+						</dl>
+					</li>
+					<li id="li03" class="game0">
+						<dl>
+							<dt class="game1"></dt>
+							<dd>
+								<img src="img/img/33.jpg" alt="" />
+							</dd>
+						</dl>
+					</li>
+					<li id="li04" class="game0">
+						<dl>
+							<dt class="game1"></dt>
+							<dd>
+								<img src="img/img/44.jpg" alt="" />
+							</dd>
+						</dl>
+					</li>
+					<li id="li05" class="game0"> 
+						<dl>
+							<dt class="game1"></dt>
+							<dd>
+								<img src="img/img/55.jpg" alt="" />
+							</dd>
+						</dl>
+					</li>
+				</ul>				
+				</div>
+				<span id="shadiao"></span>
+			</div>
+			<script type="text/javascript">
+
+			let arr=[0,1,1,1,1];
+			
+			$(function(){
+				$(".game1").mouseover(function(){
+					let ord = $(".game1").index(this);
+					if(arr[ord]==0){
+						moveRight(ord);
+					}else if(arr[ord]==1){
+						moveLeft(ord);
+					}
+				});
+				$('#shadiao').click(function(){
+					$('#box0').css('display','none');
+					$('#shadiao').css('display','none');
+				})
+				
+			});
+			
+			function moveRight(ord){
+				$(".game0").stop(true);
+				for(let i=ord+1;i<5;i++){
+					$(".game0").eq(i).animate({"left":(976-(5-i)*85)+"px"},1000);	
+					arr[i]=1;
+				}
+			}
+				
+			function moveLeft(ord){
+				$(".game0").stop(true);
+				for(let i=1;i<=ord;i++){
+					$(".game0").eq(i).animate({"left":(i*85)+"px"},1000);
+					arr[i]=0;	
+				}
+			}
+			
+			</script>
 			<div class="dogya"></div>
 			<div class="w foot">
 					<ul class="l">

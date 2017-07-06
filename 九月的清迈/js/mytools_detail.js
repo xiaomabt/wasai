@@ -208,7 +208,7 @@
 	//地址显现隐藏
 	$('#beijing').click(function(){
 		$('#beijing_1').css({'display':'block',
-							 'height':'180px'
+							 'height':'195px'
 		})
 		
 	})

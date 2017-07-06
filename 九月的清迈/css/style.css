@@ -14,6 +14,7 @@
 	height: 30px;
 	margin-left: 40%;
 	margin-top: 10px;
+	border: 2px solid #000;
 }
 #topp #topp_2{
 	width: 50px;
@@ -625,6 +626,86 @@ main .box3 .sheji a img{
 	width: 160px;
 	height: 68px;
 }
+/*=========game===================================*/
+main #gamee{
+	height: 120px;
+	background: #fff;
+	position: relative;
+}
+main #gamee #shadiao{
+	position: absolute;
+	display: block;
+	background: url(../img/close.gif) no-repeat;
+	width: 19px;
+	height: 19px;
+	right: 200px;
+	top: 0px;
+	cursor: pointer;
+
+}
+main #box0{
+	width: 975px;
+	height: 100px;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 0 0 5px #00CBCC;
+	
+}
+
+main #box0 ul{
+	list-style: none;
+	position: relative;
+}
+
+main #box0 ul li{
+	position: absolute;
+}
+
+main #box0 ul #li01{
+	left:0px;
+
+}
+main #box0 ul #li02{
+	left:85px;
+}
+main #box0 ul #li03{
+	left:170px;
+}
+main #box0 ul #li04{
+	left:255px;
+}
+main #box0 ul #li05{
+	left:340px;
+}
+
+main #box0 ul li dt{
+	float: left;
+	width: 85px;
+	height: 100px;
+}
+
+main #box0 ul li dd{
+	float: left;
+	width: 0px;
+	height: 100px;
+}
+#box0 ul li:nth-child(1) dt{
+	background: url(../img/img/1.jpg) no-repeat;
+	
+}
+#box0 ul li:nth-child(2) dt{
+	background: url(../img/img/2.jpg) no-repeat;
+}
+#box0 ul li:nth-child(3) dt{
+	background: url(../img/img/3.jpg) no-repeat;
+}
+#box0 ul li:nth-child(4) dt{
+	background: url(../img/img/4.jpg) no-repeat;
+}
+#box0 ul li:nth-child(5) dt{
+	background: url(../img/img/5.jpg) no-repeat;
+}	
+/*=========game===================================*/
 main .dogya{
 	height: 10px;
 	background: url(../img/footer_bg.gif);

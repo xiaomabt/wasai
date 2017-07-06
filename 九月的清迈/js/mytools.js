@@ -84,6 +84,9 @@
 			$('.qqzx').animate({'bottom':'200px'},'slow');
 		});
 		
+		//手风琴
+		
+		
 		
 		
 		
@@ -112,3 +115,4 @@
 			return window.getComputedStyle(obj,false)[attrName];
 		}
 	}
+	
