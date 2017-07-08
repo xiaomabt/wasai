@@ -243,12 +243,12 @@ main .register .w .one input.lovee{
 	margin-top: 10px;
 }
 main .register .w .one input.lov{
-	background: url(../img/0403_zhuce_zc.gif) no-repeat;
+	background: url(../img/login_btn.png) no-repeat;
 	display: block;
-    width: 102px;
+    width: 140px;
     margin-left: 100px;
 	margin-top: 20px;
-    height: 43px;
+    height: 33px;
     float: left;
     border: 0;
     cursor: pointer;

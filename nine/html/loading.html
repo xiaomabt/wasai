@@ -3,12 +3,13 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>用户注册 - 哇噻网</title>
+		<title>用户登录 - 哇噻网</title>
 		<link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
 		<link type="text/css" rel="stylesheet" href="../css/style_loading.css" />
 		<link type="text/css" rel="stylesheet" href="../css/public.css" />
 		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="../js/mytools_register.js"></script>
+		<script type="text/javascript" src="../js/mytools_load.js"></script>
+		<script type="text/javascript" src="../js/cookieTools.js" ></script>
 	</head>
 
 	<body>
@@ -212,7 +213,7 @@
 								data:"userName="+$('#namer').val()+"&userPass="+$("#passer").val(),
 								success:function(num){
 									if(num=="1"){
-										
+										saveCookie($('#namer'),$('#passer'),7)
 										location.href="../index.html";	
 									}else{
 										$('#tishi').html("用户名或密码错误");

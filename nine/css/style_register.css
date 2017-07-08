@@ -245,10 +245,10 @@ main .register .w .one input.lovee{
 main .register .w .one input.lov{
 	background: url(../img/0403_zhuce_zc.gif) no-repeat;
 	display: block;
-    width: 102px;
+    width: 85px;
     margin-left: 100px;
 	margin-top: 20px;
-    height: 43px;
+    height: 35px;
     float: left;
     border: 0;
     cursor: pointer;

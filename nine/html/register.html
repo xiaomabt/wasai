@@ -187,10 +187,10 @@
 					<div class="one l">
 						<h2>注册哇噻网</h2>
 						<p>喜欢手工原创设计的快加入我们！一起寻找商品，挖掘特色小店，结识志趣相投的人！</p>
-						<form action="reg.php" method="get">
-						电子邮箱：<input class="like" name="userName" type="email" autofocus placeholder="请输入昵称"/>
+						<form action="reg.php" method="get" onsubmit="submiter()">
+						电子邮箱：<input class="like" name="userName" type="email" autofocus placeholder="请输入邮箱"/>
 							  <span class="likeone">请输入一个用于登录的电子邮箱地址</span><br/>
-						昵   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input name="userPhone" id="useId" class="like" type="text" placeholder="请输入邮箱"/>
+						昵   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input name="userPhone" id="useId" class="like" type="text" placeholder="请输入昵称"/>
 							  <span class="liketwo">用于登录的名字</span><br/>
 						设置密码：<input class="like" name="userPass" type="password" placeholder="请输入密码"/>
 							  <span class="likethree">您的密码</span><br/>
@@ -199,7 +199,9 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>性别：<input type="radio" name="love" checked/>女</label>
 							<label><input type="radio" name="love"/>男</label><br/>
 						验证码：<input onclick="poor()" class="likee" type="text" placeholder="请输入验证码"/>
-							  <span onclick="poor()" id="box22" style="background-color: #f60; color: #000; font-size: 16px;">点击图片更换一张</span><br/>
+							  <span onclick="poor()" id="box22" style="background-color: #f60; color: #000; font-size: 16px;">点击图片更换一张</span>
+							  <span id="box222"></span>
+							  <br/>
 							  <hr/>
 						<input type="checkbox" class="lovee" checked/>我已阅读并同意<a href="#">《哇噻网用户协议》</a><br/>
 						<input type="submit" class="lov" value="" title="立即注册"/>
@@ -234,9 +236,25 @@
 									break;
 								}
 							}
-							 document.getElementById("box22").innerHTML=arr;	
+							 document.getElementById("box22").innerHTML=arr;
+							 
+							/*$.ajax({
+								type:"get",
+								url:"checkMa.php",
+								async:true,
+								data:"useMa="+$('#box22').html(),
+								success:function(num){
+									if(num=="1"){
+										$('#box222').html("验证码错误！");	
+									}else{
+										$('#box222').html("OK!");	
+									}
+								}
+							}); */
 						}
-						
+						$('#box22').change(function(){
+						 	
+						})
 						
 					</script>
 					
