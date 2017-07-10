@@ -8,8 +8,8 @@
 		<link type="text/css" rel="stylesheet" href="../css/style_loading.css" />
 		<link type="text/css" rel="stylesheet" href="../css/public.css" />
 		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="../js/mytools_load.js"></script>
 		<script type="text/javascript" src="../js/cookieTools.js" ></script>
+		<script type="text/javascript" src="../js/mytools_load.js"></script>
 	</head>
 
 	<body>
@@ -196,6 +196,7 @@
 					
 					
 					<script>
+					
 						for(let i=0;i<$('input').length;i++){
 							$('input')[i].onfocus=function(){
 								$('input')[i].style.border='2px solid #00cbcc';
@@ -213,7 +214,8 @@
 								data:"userName="+$('#namer').val()+"&userPass="+$("#passer").val(),
 								success:function(num){
 									if(num=="1"){
-										saveCookie($('#namer'),$('#passer'),7)
+										addCookie($('#namer').val(),$('#passer').val(),7,"/")
+										localStorage.setItem("name",$('#namer').val());
 										location.href="../index.html";	
 									}else{
 										$('#tishi').html("用户名或密码错误");
@@ -223,8 +225,8 @@
 							});
 						})
 						
+						
 					</script>
-					
 					
 					<div class="two l">
 						<div class="twoo">

@@ -181,6 +181,7 @@ header .box2 div.dingzhi .dingzhi1 a.fr4:hover{
 header .box2 ul{
 	line-height: 45px;
 }
+
 header .box2 ul li{
 	padding: 0 20px;
 	border-right:1px solid#f0f0f0 ;
@@ -201,141 +202,127 @@ header .box2 ul li.home{
 	cursor: pointer;
 }
 /*========================main==========================*/
-main .newbox{
-	height: 2558px;
+main .register{
+	height: 600px;
 	background: #fff;
-	margin-top: 60px;
+	margin-top: 3px;
 	position: relative;
-}
-main .newbox .newpr{
-	font-size: 28px;
-	line-height: 66px;
-	height: 66px;
-	font-weight: 100;
-	width: 231px;
-	display: inline-block;
-	text-align: center;
-	position: absolute;
-	top: -25px;
-	left: 42%;
-	background: #fff;
-    box-shadow: 5px 5px 0 0 rgba(0,0,0,.1);
-    color: #999;
-}
-main .newbox ul{
-	margin-top:80px;
-	float: left;
-	margin-left: 80px;
-}
-main .newbox ul>li{
-	margin-left: 13px;
-}
-
-main .newbox ul>li:after {
-    content: '•';
-    margin-left: 20px;
-}
-main .newbox .ulli ul li:after{
-	content:'';
-}
-main .newbox ul li.last:after{
-	content:'';
-}
-main .newbox>.pic{
-	margin-top: 50px;
-	position: relative;
-}
-main .newbox .pic>div{
-	width: 231px;
-	height: 380px;
-	margin-right: 44px;
-}
-main .newbox .pic div.lastf{
-	margin-right: 0px;
-}
-main .newbox .pic div img{
-	width: 242px;
-	height: 242px;
-	margin-bottom: 10px;
-	margin-top: 30px;
-}
-main .newbox .pic div{
-	position: relative;
-}
-main .newbox .pic div span{
-	display: block;
-	position: absolute;
-	left: 57%;
-	top: 13%;
-	width: 90px;
-	height: 20px;
-	border-radius: 10px;
-	background: #eee;
-	text-align: center;
-	display: none;
-}
-main .newbox .pic>div:hover span{
-	display: block;
-}
-main .newbox .pic>div:hover img{
-	transition: all .5s linear 0s;
-	transform: scale(1.05);
-	box-shadow: 0 0 5px #f60;
-}
-main .newbox .pic div span:hover{
-	background: #999;
-}
-main .newbox .pic>div .outer{
-	text-align: center;
-	color: #ff7800;
-	padding-top: 25px;
-	position: relative;
-	background: url(../img/ff26be807f0ba3a3d1ba3fb76b39bd5e.png) no-repeat 0 30px;
-	margin-left: 10px;
-}
-main .ulli{
-	width: 800px;
-	height: 100px;
-	margin-left: 260px;
-	bottom: 88px;
-	position: absolute;
-}
-main .ulli ul li a{
-	display: block;
-	width: 36px;
-	height: 36px;
-	background: url(../img/page.png) 0px 37px;
-	margin-left: 10px;
-	line-height: 36px;
-	text-align: center;
-	font-size: 16px;
-}
-main .ulli ul li.firstone a{
-	width: 25px;
-	height: 19px;
-	background: url(../img/page.png) 0px 1px;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-top: 10px;
-	color: #fff !important;
-}
-main .ulli ul li.second a{
-	background-position: 0px 73px;
-}
-main .ulli ul li a:hover{
-	background-position: 0px 73px;
-	color: #fff;
-}
-main .ulli ul li.firstone a:hover{
-	background-position: 0px 1px;
-}
-main .ulli ul li.lastone a{
-	width: 25px;
-	height: 18px;
-	background: url(../img/page.png) 25px -18px;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-top: 10px;
+	overflow: hidden;
+	#car img.imgg{
+	    margin: 50px auto;
+	}
+	#carry{
+	    margin-right: 50px;
+	}
+	#car_1 ul li:first-child{
+	    background: url(../img/goon_shopping_logo.jpg) 0 3px no-repeat;
+        width: 60px;
+        padding-left: 19px;
+        margin-left: 60px;
+	}
+	#car_1 ul li:last-child{
+        background: url(../img/shopping_consultation_logo.jpg) 0 3px no-repeat;
+        width: 60px;
+        padding-left: 19px;
+    }
+    #car_2{
+        width: 977px;
+        height: 44px;
+        background: url(../img/goods_tit_bg.jpg) repeat-x;
+        margin-top: 80px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        li{
+            margin-right: 100px;
+            margin-top: 20px;
+        }
+        li:last-child{
+            margin-right: 0px;
+        }
+        li:first-child{
+            margin-left: 50px;
+        }
+    }
+    #car_3{
+        height: 35px;
+        width: 977px;
+        margin-left: 50px;
+    }
+    #car_4{
+        width: 977px;
+        height: 90px;
+        border: 1px solid #ededed;
+        background: #f7f7f3;
+        float: left;
+        padding: 7px 0 0;
+        margin-left: 50px;
+        span.car_4_1{
+            width: 24px;
+            height: 50px;
+            float: left;
+            padding: 33px 0 0 29px;
+        }
+        dl{
+            width: 266px;
+            height: 83px;
+            float: left;
+            dt{
+                width: 79px;
+                height: 79px;
+                background: #fff;
+                border: 1px solid #d9d9d9;
+                float: left;
+                padding: 3px 0 0 3px;
+                img{
+                    width: 79px;
+                    height: 79px;
+                }
+            }
+            dd{
+                width: 149px;
+                height: 79px;
+                float: left;
+                padding: 0 0 0 10px;
+            }
+        }
+        span.money{
+                width: 90px;
+                height: 47px;
+                float: left;
+                font-size: 14px;
+                color: #FF776B;
+                padding: 36px 0 0;
+        }
+        ul {
+            width: 71px;
+            float: left;
+            height: 48px;
+            padding-top: 35px;
+            
+            li.monet{
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-top: -5px;
+        }
+        }
+        #car_5{
+            width: 165px;
+            height: 60px;
+            text-align: center;
+            float: left;
+            padding: 23px 0 0;
+        }
+        #car_6{
+            width: 142px;
+            height: 48px;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            color: #FF776B;
+            font-weight: 700;
+            padding: 35px 0 0;
+        }
+    }
 }
 
 /*==========================================*/

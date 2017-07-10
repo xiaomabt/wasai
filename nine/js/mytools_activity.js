@@ -76,9 +76,24 @@
 		});
 		//倒计时
 		time();
+		
 		setInterval(time,1000);
 		
+		var strStoreDate = window.localStorage? localStorage.getItem("name"): Cookie.read("name");
 		
+		if(strStoreDate==null){
+			$('#loadi').css('display','none');
+		}else{
+			$('#load_ing').css('display','none');
+			$('#loadin').html(strStoreDate);
+		}
+		$('#top_99').click(function(){
+			var storage=window.localStorage;
+	            storage.a=1;
+	            storage.setItem("name",3);
+	            storage.clear();
+	            location=location ;
+		})
 		
 		
 	});

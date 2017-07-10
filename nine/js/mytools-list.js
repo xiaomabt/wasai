@@ -91,19 +91,33 @@
 			type:"get",
 			success:function(data){
 			var obj=eval(data);
-				for(i=0;i<8;i++){
+				for(i=0;i<24;i++){
 					let goodsId=obj[i].goodsId;
 					let goodsPrice=obj[i].goodsPrice;
 					let goodsImg=obj[i].goodsImg;
 					let goodsDesc=obj[i].goodsDesc;
-					let str="<div class='l'><a href='detail.html'><img src='../img/wgood_201706271143555884.jpg' /><span>收藏到橱窗</span></a><a href='detail.html'>【原创桃花源】 民族风独家 清迈泰银 镂空雕花 纯银耳环 耳坠</a><div class='outer'>￥160</div></div>";
+					let str="<div class='l'><a href='detail.html'><img src='"+goodsImg+"' /><span>收藏到橱窗</span></a><a href='detail.html'>"+goodsDesc+"</a><div class='outer'>￥"+goodsPrice+"</div></div>";
 					$('#list_10').append(str);
 				}
 			}	
 		})
 		
 		
+		var strStoreDate = window.localStorage? localStorage.getItem("name"): Cookie.read("name");
 		
+		if(strStoreDate==null){
+			$('#loadi').css('display','none');
+		}else{
+			$('#load_ing').css('display','none');
+			$('#loadin').html(strStoreDate);
+		}
+		$('#top_99').click(function(){
+			var storage=window.localStorage;
+	            storage.a=1;
+	            storage.setItem("name",3);
+	            storage.clear();
+	            location=location ;
+		})
 		
 		
 	});

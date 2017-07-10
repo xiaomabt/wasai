@@ -187,14 +187,14 @@
 					<div class="one l">
 						<h2>注册哇噻网</h2>
 						<p>喜欢手工原创设计的快加入我们！一起寻找商品，挖掘特色小店，结识志趣相投的人！</p>
-						<form action="reg.php" method="get" onsubmit="submiter()">
-						电子邮箱：<input class="like" name="userName" type="email" autofocus placeholder="请输入邮箱"/>
+						<form action="reg.php" method="get">
+						电子邮箱：<input id="ispass1" class="like" name="userName" type="email" autofocus placeholder="请输入邮箱"/>
 							  <span class="likeone">请输入一个用于登录的电子邮箱地址</span><br/>
 						昵   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input name="userPhone" id="useId" class="like" type="text" placeholder="请输入昵称"/>
 							  <span class="liketwo">用于登录的名字</span><br/>
-						设置密码：<input class="like" name="userPass" type="password" placeholder="请输入密码"/>
+						设置密码：<input id="ispass2" class="like" name="userPass" type="password" placeholder="请输入密码"/>
 							  <span class="likethree">您的密码</span><br/>
-						确认密码：<input class="like" type="password" placeholder="再次输入密码"/>
+						确认密码：<input id="ispass3" class="like" type="password" placeholder="再次输入密码"/>
 							  <span class="likefour">重复输入您的密码</span><br/>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>性别：<input type="radio" name="love" checked/>女</label>
 							<label><input type="radio" name="love"/>男</label><br/>
@@ -252,9 +252,7 @@
 								}
 							}); */
 						}
-						$('#box22').change(function(){
-						 	
-						})
+						
 						
 					</script>
 					

@@ -75,7 +75,7 @@
 	        $("body").animate({scrollTop: '0px'}, "slow");
 		});
 		
-		
+		let idPass=[1,1,1,1];
 		function poor(){
 							var arr="";
 							var x;
@@ -105,10 +105,11 @@
 			if(reg.test(xx)==false){
 				$('.likeone')[0].innerHTML='这不是一个有效的电子邮箱';
 				$('.likeone').css('color','#f00');
-				return;
+				idPass[0]=0;
 			}else{
 				$('.likeone')[0].innerHTML='OK!';
 				$('.likeone').css('color','#f00');
+				idPass[0]=2;
 			}
 		}
 		$('input')[2].onchange=function(){
@@ -117,7 +118,7 @@
 			if(reg.test(xx)==false){
 				$('.liketwo')[0].innerHTML='昵称仅支持汉字';
 				$('.liketwo').css('color','#f00');
-				return;
+				idPass[1]=0;
 			}else{
 				$('.liketwo').css('color','#f00');
 							$.ajax({
@@ -133,6 +134,7 @@
 									}
 								}
 							});
+							idPass[1]=2;
 			}
 		}
 		$('input')[3].onchange=function(){
@@ -141,10 +143,11 @@
 			if(reg.test(xx)==false){
 				$('.likethree')[0].innerHTML='密码含非法字符';
 				$('.likethree').css('color','#f00');
-				return;
+				idPass[2]=0;
 			}else{
 				$('.likethree')[0].innerHTML='OK!';
 				$('.likethree').css('color','#f00');
+				idPass[2]=2;
 			}
 		}
 		$('input')[4].onchange=function(){
@@ -153,12 +156,23 @@
 			if(reg!=xx){
 				$('.likefour')[0].innerHTML='两次密码不一致';
 				$('.likefour').css('color','#f00');
-				return;
+				idPass[3]=0;
 			}else{
 				$('.likefour')[0].innerHTML='OK!';
 				$('.likefour').css('color','#f00');
+				idPass[3]=2;
 			}
 		}
+		$('form').submit(function(){
+			for(let i=0;i<idPass.length;i++){
+				if(idPass[i]!=2){
+					alert("您的输入有误，请重新按提示输入!")
+					return false;
+				}
+			}
+			
+		});
+			
 		
 	});
 	function $q(id){

@@ -83,12 +83,21 @@
 		$('.qqzx').mouseleave(function(){
 			$('.qqzx').animate({'bottom':'200px'},'slow');
 		});
+		var strStoreDate = window.localStorage? localStorage.getItem("name"): Cookie.read("name");
 		
-		//手风琴
-		
-		
-		
-		
+		if(strStoreDate==null){
+			$('#loadi').css('display','none');
+		}else{
+			$('#load_ing').css('display','none');
+			$('#loadin').html(strStoreDate);
+		}
+		$('#top_99').click(function(){
+			var storage=window.localStorage;
+	            storage.a=1;
+	            storage.setItem("name",3);
+	            storage.clear();
+	            location=location ;
+		})
 		
 	});
 	function $q(id){

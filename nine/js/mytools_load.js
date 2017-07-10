@@ -74,9 +74,18 @@
 	      	//  console.log(scrollTop)
 	        $("body").animate({scrollTop: '0px'}, "slow");
 		});
-		//cookie
-		getCookie($('#namer');
+		//cookie???
+		let str = unescape(document.cookie);
+		let str2=str.split("; ")
+		let str3=str2[0];
+		let str1=str3.split("=");
+		$('#namer').val(str1[0]);
+		$('#passer').val(str1[1]);
 		
+		$('#passer').blur(function(){
+			let xx=getCookieValue($('#namer').val());
+			$('#passer').val(xx);
+		})
 		
 		
 	});
