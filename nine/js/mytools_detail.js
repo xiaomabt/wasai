@@ -51,6 +51,7 @@
 				$('.fix')[0].style.display="block";
 			}
 		}
+		
 		//二级菜单隐藏
 		$('.dingzhiyuan')[0].onmousemove=function(){
 			$('.dingzhi')[0].style.display="block";
@@ -86,6 +87,31 @@
 				$('input')[i].style.border='2px solid #ccc';
 			}
 		}
+		
+		//动态detail
+		$.ajax({
+			url:"../html/php/getGoodsInfo.php",
+			async:true,
+			type:"get",
+			data:"goodsId="+getCookieValue("name"),
+			success:function(data){
+				 var obj=data;
+					let goodsId=obj.goodsId;
+					let goodsPrice=obj.goodsPrice;
+					let goodsImg=obj.goodsImg;
+					let goodsDesc=obj.goodsDesc;
+					let str="<div class='hat1' style='background: url("+goodsImg+") no-repeat;background-size: 420px  420px;'><span class='box11'></span></div><div class='box22'><span class='hat11' style='background: url("+goodsImg+") no-repeat;background-size:1260px 1260px;'></span></div>";
+					$('.hat').append(str);
+					poor3();
+					let str1="<span class='price1'>价 &nbsp;&nbsp;格：</span><span class='price2'>￥"+goodsPrice+"</span>"
+					$('.price').append(str1);
+					let str2=goodsDesc;
+					$('.detail_010').append(str2);
+			},
+			dataType:"json"
+		});
+		
+		
 		//侧边栏的显现隐藏
 		$('#paihang_two').click(function(){
 			$('.uncle').css('display','none');
@@ -106,42 +132,7 @@
 									});
 		});
 	
-		//放大镜
-		let tuWidth=420;
-		let tuHeight=420;
-		let yuanWidth=150;
-		let yuanHeight=150;
-
-		window.onload=function(){
-		$(".hat1")[0].onmousemove=function(event){
-		let e=event||window.event;
-		let offsetleft=$(".hat1")[0].offsetLeft;
-		let offsettop=$(".hat1")[0].offsetTop;
-		let scrolltop=document.body.scrollTop||document.documentElement.scrollTop
-		let top=e.clientY-offsettop-yuanHeight/2+scrolltop;
-		let left=e.clientX-offsetleft-yuanWidth/2;
-			if(top<0){
-				top=0;
-			}else if(top>tuHeight-yuanHeight){
-				top=tuHeight-yuanHeight;
-			}
-			if(left<0){
-				left=0;
-			}else if(left>tuWidth-yuanWidth){
-				left=tuWidth-yuanWidth;
-			}
-		$(".box11")[0].style.top=top+"px";
-		$(".box11")[0].style.left=left+"px";
-
-		$(".hat11")[0].style.top=-3*top+"px";
-		$(".hat11")[0].style.left=-3*left+"px";
-
-		$('.box22').css('display','block');
-		$(".hat1")[0].onmouseout=function(){
-			$('.box22').css('display','none');
-		}
-	}
-}
+		
 							
 	
 	//轮播图，用的原生
@@ -241,6 +232,22 @@
 	            location=location ;
 		})
 	
+		$('.btn').click(function(){
+			$.ajax({
+			url:"../html/php/addShoppingCart.php",
+			async:true,
+			type:"get",
+			data:"goodsId="+getCookieValue("name")+"&vipName="+strStoreDate+" &goodsCount="+$('.chima_01').html(),
+			success:function(num){
+				if(num=="1"){
+					console.log("恭喜添加成功！");
+				}
+			}	
+		});
+	});
+	
+	
+	
 	//完结
 	});
 	
@@ -262,3 +269,45 @@
 			$('.chima').css('background','red')
 		})
 	}*/
+	
+
+//放大镜
+
+	function poor3(){
+		let tuWidth=420;
+		let tuHeight=420;
+		let yuanWidth=150;
+		let yuanHeight=150;
+
+		
+		
+		$(".hat1")[0].onmousemove=function(event){
+			let e=event||window.event;
+			let offsetleft=$(".hat1")[0].offsetLeft;
+			let offsettop=$(".hat1")[0].offsetTop;
+			let scrolltop=document.body.scrollTop||document.documentElement.scrollTop
+			let top=e.clientY-offsettop-yuanHeight/2+scrolltop;
+			let left=e.clientX-offsetleft-yuanWidth/2;
+				if(top<0){
+					top=0;
+				}else if(top>tuHeight-yuanHeight){
+					top=tuHeight-yuanHeight;
+				}
+				if(left<0){
+					left=0;
+				}else if(left>tuWidth-yuanWidth){
+					left=tuWidth-yuanWidth;
+				}
+			$(".box11")[0].style.top=top+"px";
+			$(".box11")[0].style.left=left+"px";
+	
+			$(".hat11")[0].style.top=-3*top+"px";
+			$(".hat11")[0].style.left=-3*left+"px";
+	
+			$('.box22').css('display','block');
+			$(".hat1")[0].onmouseout=function(){
+				$('.box22').css('display','none');
+			}
+		}
+		
+}

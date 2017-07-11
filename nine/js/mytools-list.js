@@ -96,7 +96,7 @@
 					let goodsPrice=obj[i].goodsPrice;
 					let goodsImg=obj[i].goodsImg;
 					let goodsDesc=obj[i].goodsDesc;
-					let str="<div class='l'><a href='detail.html'><img src='"+goodsImg+"' /><span>收藏到橱窗</span></a><a href='detail.html'>"+goodsDesc+"</a><div class='outer'>￥"+goodsPrice+"</div></div>";
+					let str="<div class='l'><a href='../html/detail.html'><img class='cook' src='"+goodsImg+"' name='"+goodsId+"' /><span>收藏到橱窗</span></a><a href='detail.html'>"+goodsDesc+"</a><div class='outer'>￥"+goodsPrice+"</div></div>";
 					$('#list_10').append(str);
 				}
 			}	
@@ -118,7 +118,13 @@
 	            storage.clear();
 	            location=location ;
 		})
-		
+		//记录GoodsId
+		$("#list_10").on("click",'.cook',function(){
+			var nameer=$(this).attr("name");
+			console.log(nameer)
+			addCookie("name",nameer,7,"/");
+			//location.href="https://www.baidu.com/";
+		})
 		
 	});
 	function $q(id){

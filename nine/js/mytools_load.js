@@ -82,7 +82,7 @@
 		$('#namer').val(str1[0]);
 		$('#passer').val(str1[1]);
 		
-		$('#passer').blur(function(){
+		$('#namer').blur(function(){
 			let xx=getCookieValue($('#namer').val());
 			$('#passer').val(xx);
 		})

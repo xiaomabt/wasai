@@ -315,8 +315,8 @@ main .new_hat .hat{
 main .new_hat .hat .hat1{
 	width: 420px;
 	height: 420px;
-	background: url(../img/big_201706221417207475.jpg) no-repeat;
-	background-size: 420px  420px;
+	/*background: url(../img/big_201706221417207475.jpg) no-repeat;*/
+	/*background-size: 420px  420px;*/
 	position:relative;
 }
 main .new_hat .hat .hat1 span{
@@ -341,9 +341,9 @@ main .new_hat .hat .box22{
 main .new_hat .hat .box22 .hat11{
 	width: 1260px;
 	height: 1260px;
-	background: url(../img/big_201706221417207475.jpg) no-repeat;
+	/*background: url(../img/big_201706221417207475.jpg) no-repeat;*/
 	display:absolute;
-	background-size:1260px 1260px;
+	/*background-size:1260px 1260px;*/
 	position:absolute;
 }
 main .new_hat .hat .hat1:hover span{
