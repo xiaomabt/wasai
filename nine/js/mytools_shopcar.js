@@ -13,32 +13,6 @@
 		$('#weixinma').mouseout(function(){
 			$('#weixin2').css('display','none');
 		})
-		//FIX二维码的出现消失
-		/*$('#weixinma')[0].onmousemove=function(){
-			$('#weixin2')[0].style.display="block";
-		}
-		$('#weixinma')[0].onmouseout=function(){
-			$('#weixin2')[0].style.display="none";
-		}*/
-	
-		/*<script>
-	  var jq = $.noConflict(); 
-				jq('#pppq').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#qqqp').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#pppq').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-				jq('#qqqp').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-			  
-   </script>*/
 		
 		
 		window.onscroll = function(){ 
@@ -96,8 +70,6 @@
 		})
 		
 		
-		
-		
 		//添加至购物车
 		$.ajax({
 			url:"../html/php/getShoppingCart.php",
@@ -112,45 +84,15 @@
 					let goodsImg=obj[i].goodsImg;
 					let goodsDesc=obj[i].goodsDesc;
 					let goodsCount=obj[i].goodsCount;
-					let str="<div id='car_4'><span class='car_4_1'><input type='checkbox' /></span><dl><dt><img src='"+goodsImg+"' /></dt><dd>"+goodsDesc+"<br/>颜色:白色 尺码:M</dd></dl><span class='money'>￥"+goodsPrice+"</span><ul><li class='monet l _one'>-</li><li class='monet l _two'>1</li><li class='monet l _three'>+</li></ul><span id='car_5'>--</span><span id='car_6'>￥89.00</span><span id='car_7'><a id='car_8' href='#'>加入最爱</a><a id='car_9' href='#'>删除</a></span></div>";
+					let str="<div class='car_4'><span class='car_4_1'><input class='inputer' value='"+goodsId+"' type='checkbox' /></span><dl><dt><img src='"+goodsImg+"' /></dt><dd>"+goodsDesc+"<br/>颜色:白色 尺码:M</dd></dl><span class='money'>￥<em>"+goodsPrice+"</em></span><ul><li class='monet l _one'>-</li><li class='monet l _two'>"+goodsCount+"</li><li class='monet l _three'>+</li></ul><span class='car_5'>--</span><span class='car_6'>￥<em>"+goodsPrice+"</em></span><span class='car_7'><a class='car_8' href='#'>加入最爱</a><a class='car_9' onclick='deleteGoods("+goodsId+")' href='#'>删除</a></span></div>";
 					$('#car').append(str);
-					
 				}
 					let str_1="购物车状态（"+obj.length+"/99）";
 					$('.pp_1').append(str_1);
 					jiajian();
+					zong();
 			}	
-		})
-		//数量问题解决
-		/*$('#car_9').click(function(){
-			$.ajax({
-			url:"../html/php/deleteGoods.php",
-			async:true,
-			type:"get",
-			data:"vipName="+strStoreDate"&goodsId="+$(this).goodsId,
-			success:function(date){
-				let obj=eval(date);
-				for(i=0;i<obj.length;i++){
-					let goodsId=obj[i].goodsId;
-					let goodsPrice=obj[i].goodsPrice;
-					let goodsImg=obj[i].goodsImg;
-					let goodsDesc=obj[i].goodsDesc;
-					let goodsCount=obj[i].goodsCount;
-					let str="<div id='car_4'><span class='car_4_1'><input type='checkbox' /></span><dl><dt><img src='"+goodsImg+"' /></dt><dd>"+goodsDesc+"<br/>颜色:白色 尺码:M</dd></dl><span class='money'>￥"+goodsPrice+"</span><ul><li class='monet l _one'>-</li><li class='monet l _two'>1</li><li class='monet l _three'>+</li></ul><span id='car_5'>--</span><span id='car_6'>￥89.00</span><span id='car_7'><a id='car_8' href='#'>加入最爱</a><a id='car_9' href='#'>删除</a></span></div>";
-					$('#car').append(str);
-					
-					}
-					let str_1="购物车状态（"+obj.length+"/99）";
-					$('.pp_1').append(str_1);
-					jiajian();
-				}	
-			})
-		})*/
-		
-		
-		
-		
-		
+		});
 		
 			
 	});
@@ -171,40 +113,67 @@
 			$('.ziti').html(str);
 		}
 	
+	
+	//加减商品
 	function jiajian(){
-		//加减商品
 		let count=$('._one');
 		for(let i=0;i<count.length;i++){
 			$('._one')[i].onclick=function(){
-				let num=$('._two').html();
+				let num=$(this).next('li').html();
 					if(num==1){
-						$('._two')[i].innerHTML=1;
+						$(this).next('li').html(1);
 					}else{
-						$('._two')[i].innerHTML=num-1;
+						$(this).next('li').html(num-1);
+						let test=$(this).parent().prev().find('em').html();
+						let test2=test*$(this).next().html();
+						$(this).parent().next().next().find('em').html(test2);
+						zong();
 					}
 			}
+			
 		}
 		for(let i=0;i<count.length;i++){
 			$('._three')[i].onclick=function(){
-				let num=$('._two').html();
-					if(num==1){
-						$('._two')[i].innerHTML=1;
-					}else{
-						$('._two')[i].innerHTML=num+1;
-					}
+				let num=$(this).prev('li').html();
+				let num1=parseInt(num)
+					$(this).prev('li').html(num1+1);
+					let test=$(this).parent().prev().find('em').html();
+					let test2=test*$(this).prev().html();
+					$(this).parent().next().next().find('em').html(test2);
+					zong();
+				}
+
 			}
+		
 		}
-		/*$('._one').click(function(){
-		let num=$('._two').html();
-		if(num==1){
-			$('._two').html(1);
-		}else{
-			$('._two').html(num-1);
+	
+	//删除商品
+	function deleteGoods(goodsId){
+		var strStoreDate = window.localStorage? localStorage.getItem("name"): Cookie.read("name");
+			$.ajax({
+				url:"../html/php/deleteGoods.php",
+				async:true,
+				type:"get",
+				data:{
+					vipName:strStoreDate,
+					goodsId:goodsId
+				},
+				success:function(data){
+					if(data=="1"){
+						alert('删除成功');
+					}
+				}
+			});
+			location=location;
 		}
-		})
-		$('._three').click(function(){
-			let num=parseInt($('._two').html());
-			$('._two').html(num+1);
-		})*/
+	
+	//总价钱
+	function zong(){
+		let zong=$('.car_6').find('em');
+		let xx=0;
+		for(let i=0;i<zong.length;i++){
+			xx+=parseFloat(zong[i].innerHTML);
+		}
+		$('#zongjia').find('em').html(xx);
 	}
 	

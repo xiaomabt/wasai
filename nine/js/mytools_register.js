@@ -114,9 +114,9 @@
 		}
 		$('input')[2].onchange=function(){
 			let xx=$('input')[2].value;
-			let reg=/^[\u2E80-\u9FFF]+$/;
+			let reg=/^\w{3,10}$/;
 			if(reg.test(xx)==false){
-				$('.liketwo')[0].innerHTML='昵称仅支持汉字';
+				$('.liketwo')[0].innerHTML='昵称格式错误';
 				$('.liketwo').css('color','#f00');
 				idPass[1]=0;
 			}else{

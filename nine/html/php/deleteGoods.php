@@ -9,21 +9,28 @@
 	$conn = mysql_connect("localhost","root","123");
 	
 	//2）、选择数据库（找目的地）
-	mysql_select_db("mysqlone",$conn);
-	
-	//3）、传输数据（过桥）
-	//insert语句
-	$sqlstr = "delete from  shoppingCart where vipName='".$vipName."' and goodsId='".$goodsId."'";
-	//echo($sqlstr);
-	
-	$result=true;
-	if(!mysql_query($sqlstr,$conn)){
-		$result=false;
+	if(!mysql_select_db("mysqlone",$conn)){
+		die("数据库选择失败".mysql_error());
 	}
 	
+	//3）、传输数据（过桥）
+	$sqlstr = "delete from  shoppingCart where vipName='".$vipName."' and goodsId='".$goodsId."'";
+    $result=mysql_query($sqlstr,$conn);	
+   
+	if(!$result){
+		die("删除SQL语句执行失败".mysql_error());
+		echo 0; //1：表示删除成功，0：表示删除失败。
+	}	
 	//4）、关闭连接（拆桥）
 	mysql_close($conn);
 	
 	//3、给客户端返回（响应）！
-	echo $result;
+	
+	if(!$result){
+		
+	}else{
+		echo 1;
+	}
+	
+	
 ?>
