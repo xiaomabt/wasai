@@ -1,0 +1,352 @@
+@charset "utf-8";
+/* CSS Document */
+/*==============================样式重置==============================*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,figure,figcaption{
+    padding:0;
+    margin:0;
+}
+img{
+    display:block;
+    border:0;
+}
+input{
+    outline:none;
+}
+ul,ol{
+    list-style:none;
+}
+header,footer,nav,main,section,aside,article,figure,figcaption{
+    display:block;
+}
+body{
+    font-size:12px;
+    color:#3e3e3e;
+    font-family:"微软雅黑";
+    background:#fff;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+a:hover{
+    color:#e36c00;
+}
+/*=================================font===============================*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*=============================header===========================*/
+header{
+    width: 100%;
+    height: 65px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+header #head{
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header #head #yun a{
+    height: 100%;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #head #yun img{
+    height: 48px;
+}
+header #head i{
+    display: none;
+    line-height: 46px;
+    margin-right: 50px;
+    font-size: 22px;
+    color: #fff;
+}
+header #head #inner{
+    height: 100%;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+header #head #inner li a{
+    display: block;
+    padding: 0 15px;
+    font-size: 16px;
+    height: 63px;
+    line-height: 63px;
+}
+header #head #inner li a:hover{
+    background: rgba(71, 60, 60, 0);
+    border-bottom: 1px solid #e36c00;
+    background: #222;
+}
+header #head #inner li#outer a:hover{
+    border-bottom:0;
+}
+header #head #inner li#outer{
+    position: relative;
+}
+header #head #inner li#outer span#load{
+    display: inline-block;
+    position: absolute;
+    width: 94px;
+    height: 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+    display: none;
+}
+header #head #inner li#outer span#load:hover{
+    background: #eee;
+}
+/*=================================main=============================*/
+
+main #one{
+    width: 100%;
+    height: auto;
+    background: #fcfcfc;
+}
+main #one p{
+    text-align: center;
+}
+main #two{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+main #one ul{
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+main #one ul li{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+main #one ul li img{
+    width: 80%;
+    height: 60%;
+}
+main #one ul li img:hover{
+
+}
+
+main .qqzx{
+    position: fixed;
+    left: 0px;
+    bottom: 200px;
+    z-index: 10;
+}
+
+/*===================footer=============================*/
+footer{
+    height: 106px;
+    width: 100%;
+}
+footer #foot{
+    height: 66%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer #foot p{
+    color: #ccc;
+    font-size: 14px;
+}
+footer #footr{
+    height: 44%;
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer #footr p{
+    font-size: 14px;
+}
+#celan{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+#celan ul{
+    position: fixed;
+    top: 46px;
+    right: 0;
+    width: 250px;
+    height: 400px;
+    background: #000;
+}
+#celan ul li{
+    margin: 10px 20px;
+    font-size: 20px;
+    color: #ccc;
+    border-bottom: 1px solid #888;
+    cursor: pointer;
+}
+
+
+
+
+
+/*===================侧边=============================*/
+#guding{
+    width: 34px;
+    height: 78px;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+}
+#guding div{
+    cursor: pointer;
+    position: absolute;
+}
+#guding div:last-child{
+    bottom: 0;
+}
+#weixin{
+    width: 200px;
+    height: 380px;
+    position: fixed;
+    right: -210px;
+    bottom: 74px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px #ccc;
+    z-index: 100;
+}
+#weixin .box{
+    height: 38px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background: #5cb85c;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#weixin .box div{
+    height: 25px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#weixin .box div a{
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+#weixin .box div img{
+    display: inline-block;
+    cursor: pointer;
+}
+#weixin .box1{
+    height: 33px;
+    width: 198px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    background: #eee;
+}
+#weixin .box1 span{
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background: url(../img/userInfo.gif) 0px -48px;
+}
+#weixin .box1:hover span{
+    background-position: 0 -60px;
+}
+#weixin .box2{
+    height: 76px;
+    width: 198px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+#weixin .box2 img{
+    margin: 8px auto;
+}
+#weixin .box3{
+    height: 231px;
+    width: 198px;
+    border-radius:  0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#weixin .box3 img{
+    height: 169px;
+    width: 169px;
+    margin: 10px auto;
+}
+/*===================媒体查询=============================*/
+@media screen and (max-width: 1210px){
+    header #head #inner> li > a{padding: 0 13px}
+}
+
+@media screen and (max-width: 1050px){
+    header #head #inner> li > a{padding: 0 10px}
+    footer{  height: 96px;}
+}
+
+@media screen and (max-width: 990px){
+    header #head #inner> li > a{padding: 0 6px}
+    footer{  height: 86px;}
+    main .qqzx img{  height: 130px;  }
+}
+
+@media only screen and (max-width:800px) {
+    header {height: 46px;position: fixed;top: 0;z-index: 10 }
+    header #head #yun img { height: 23px;}
+    header #head i{display: block;cursor: pointer }
+    header #head #inner{ display: none;}
+    main #one ul li img{  width: 100%; height: 60%; }
+    footer{  height: 76px;}
+    main .qqzx img{  height: 100px;  }
+}
+
+@media only screen and (max-width:640px) {
+    main #one ul li{  width: 50%;flex-wrap: wrap}
+    main #one ul li img{  width: 100%; height: 70%; }
+    main #two{  height: auto; }
+    main .three{  height: 100px;}
+    main .three a{  font-size: 14px;  width: 100px;  height:46px; line-height: 46px}
+    main .qqzx img{  height: 80px;  }
+}

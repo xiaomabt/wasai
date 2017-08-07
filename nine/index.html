@@ -7,8 +7,7 @@
 		<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
 		<link type="text/css" rel="stylesheet" href="css/public.css" />
-		<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="js/mytools.js"></script>
+		<script type="text/javascript" src="js/require.js" data-main = "js/main" async="true" defer  ></script>
 	</head>
 
 	<body>
@@ -115,17 +114,6 @@
 					<li class="r"><a href="html/activity.html">画报</a></li>
 					<li class="r first"><a href="html/activity.html">动态</a></li>
 				</ul>
-				<script>
-						for(let i=0;i<$('input').length;i++){
-							$('input')[i].onfocus=function(){
-								$('input')[i].style.border='2px solid #00cbcc';
-							}
-							$('input')[i].onblur=function(){
-								$('input')[i].style.border='2px solid #ccc';
-							}
-						}
-					
-				</script>
 				<div class="dingzhi">
 					<div class="dingzhi1">
 						<a href="html/list.html" class="fr1">
@@ -290,80 +278,12 @@
 		        <a href="javascript:;" id="next" class="arrow arrow2"></a>
     		</div>	       
 		</div>
-		<script type="text/javascript">
-			let imgs,spans,timer;
-			window.onload = function() {
-			//1,取得需要操作的元素
-			let list = $q('list');
-			imgs=list.getElementsByTagName("img");
-			let prev = $q('prev');
-			let next = $q('next');
-			spans = $q('buttons').getElementsByTagName("span");
-			let container = $q('container');
-			let index=0;
-			//2,左右事件绑定:
-			prev.onclick=function(){
-				index--;//计算索引位置
-				if(index<0){index=5;}	
-				changeImg(index);//	切换图片
-			};
-			next.onclick=function(){
-				index++;//计算索引位置
-				if(index>5){index=0;}		
-				changeImg(index);//	切换图片
-			};
-			//给小圆点绑定单击事件
-			for(let i=0;i<spans.length;i++){
-				spans[i].onclick=function(){
-					index=spans[i].getAttribute("index")-1;//取得小圆点代表的索引位置
-					changeImg(index);//	切换图片	
-				};
-			}
-			/*timer=setInterval(next.onclick,3000);
-			for(let i=0;i<imgs.length;i++){
-				imgs[i].onmouseover=function(){
-					clearInterval(timer);
-				};		
-				imgs[i].onmouseout=function(){
-					clearInterval(timer);
-					timer=setInterval(next.onclick,3000);
-				};
-			}*/
-			timer=setInterval(next.onclick,3000);
-			container.onmouseover=function(){
-				clearInterval(timer);
-			};
-			container.onmouseout=function(){
-				//填坑！！！这个timer不赋值清不掉定时器
-				timer=setInterval(next.onclick,3000);
-			};
-		
-		};
-		function changeImg(index){
-		//显示index的图片，隐藏其他图片
-		for(let i=0;i<imgs.length;i++){
-			if(i==index){
-				move8(imgs[i],100);//调用淡入淡出运动函数
-			}else{
-				move8(imgs[i],0);			
-			}
-		}
-		//4,取消所有小圆点的样式，设置索引为index的小圆点样式为on
-		for(let i=0;i<spans.length;i++){
-			if(i==index){
-				spans[i].className="on";
-			}else{
-				spans[i].className="";
-			}
-		}
-	}
-</script>
 
 		<main>
 			<div class="w box3">
 				<h2>当日精选</h2>
 				<div class="list l first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201504241737019947.jpg" />
 						<div class="taohua">
 							<p>古典用品桃花润面霜</p>
@@ -371,7 +291,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201504241737384704.jpg" />
 						<div class="taohua">
 							<p>泰银海底总动员脚链</p>
@@ -379,7 +299,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201510211656385761.jpg" />
 						<div class="taohua">
 							<p>黑白纹路时尚钱夹</p>
@@ -387,7 +307,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201505151736506747.jpg" />
 						<div class="taohua">
 							<p>有温度的保护木壳</p>
@@ -399,7 +319,7 @@
 			<div class="w box3">
 				<h2>定制推荐</h2>
 				<div class="list l first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201406261357018013.jpg" />
 						<div class="taohua">
 							<p>JUST2YOU手表定制</p>
@@ -407,7 +327,7 @@
 					</a>
 				</div>
 				<div class="list l only">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201504211133414024.jpg" />
 						<div class="taohua">
 							<p>若爱，请深爱。</p>
@@ -415,7 +335,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201510211656385761.jpg" />
 						<div class="taohua">
 							<p>与书为伴 朴素简静</p>
@@ -426,7 +346,7 @@
 			<div class="w box3">
 				<h2 class="only"></h2>
 				<div class="list l first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201501201205534129.jpg" />
 						<div class="taohua">
 							<p>【忆笑颜】紫光檀木红珊瑚吊坠</p>
@@ -434,7 +354,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201410210939087168.jpg" />
 						<div class="taohua">
 							<p>古着范</p>
@@ -442,7 +362,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201411101752507568.jpg" />
 						<div class="taohua">
 							<p>一木一生</p>
@@ -450,7 +370,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201411211809008555.jpg" />
 						<div class="taohua">
 							<p>经典款皮靴</p>
@@ -462,7 +382,7 @@
 			<div class="w box3">
 				<h2 class="only2">设计精选</h2>
 				<div class="list l first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201505221428472797.jpg" />
 						<div class="taohua">
 							<p>田园竹编花蕾吊灯</p>
@@ -470,7 +390,7 @@
 					</a>
 				</div>
 				<div class="list l only">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201502021544065137.jpg" />
 						<div class="taohua">
 							<p>轻奢！独家手工，独家定制</p>
@@ -478,7 +398,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201412251728264327.jpg" />
 						<div class="taohua">
 							<p>复古植鞣皮大款马鞍包</p>
@@ -488,7 +408,7 @@
 			</div>
 			<div class="w box3">
 				<div class="list l first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201412101319022601.jpg" />
 						<div class="taohua">
 							<p>超纤皮革软面记事本</p>
@@ -496,7 +416,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201505221427115689.jpg" />
 						<div class="taohua">
 							<p>可定制马赛克爱琴海台灯</p>
@@ -504,7 +424,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201505221426261798.jpg" />
 						<div class="taohua">
 							<p>随手拿起，走进童话里</p>
@@ -512,7 +432,7 @@
 					</a>
 				</div>
 				<div class="list l">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201412251735446057.jpg" />
 						<div class="taohua">
 							<p>九口山旅行记事本</p>
@@ -526,7 +446,7 @@
 				<span><a href="#"></a></span>
 				<h2>总有些东西在激励着你</h2>
 				<div class="list l lis first">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201411101714119958.jpg" />
 						<div class="taohua">
 							<p>聚划算 聚奇趣</p>
@@ -534,7 +454,7 @@
 					</a>
 				</div>
 				<div class="list l lis">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201410101703427247.jpg" />
 						<div class="taohua">
 							<p>文艺复古超有范</p>
@@ -542,7 +462,7 @@
 					</a>
 				</div>
 				<div class="list l lis">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201411101827567505.jpg" />
 						<div class="taohua">
 							<p>享手工 爱孤品</p>
@@ -556,10 +476,10 @@
 				<span class="more"><a href="#"></a></span>
 				<h2 class="zk"></h2>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201401241646529026.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner"></div>
 					<dl>
 						<dt>
@@ -570,10 +490,10 @@
 					</a>
 				</div>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201403111826408729.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner"></div>
 					<dl>
 						<dt>
@@ -584,10 +504,10 @@
 					</a>
 				</div>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201401241651073021.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner inn"></div>
 					<dl class="box">
 						<dt>
@@ -598,10 +518,10 @@
 					</a>
 				</div>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201401241652502605.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner inn"></div>
 					<dl class="box">
 						<dt>
@@ -612,10 +532,10 @@
 					</a>
 				</div>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201401241654105844.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner"></div>
 					<dl>
 						<dt>
@@ -626,10 +546,10 @@
 					</a>
 				</div>
 				<div class="l designer">
-					<a href="#" target="_blank">
+					<a href="html/list.html" target="_blank">
 						<img src="img/201401241655208150.jpg" />
 					</a>
-					<a href="#" class="abox" target="_blank">
+					<a href="html/list.html" class="abox" target="_blank">
 					<div class="inner"></div>
 					<dl>
 						<dt>
@@ -829,43 +749,6 @@
 				</div>
 				<span id="shadiao"></span>
 			</div>
-			<script type="text/javascript">
-
-			let arr=[0,1,1,1,1];
-			
-			$(function(){
-				$(".game1").mouseover(function(){
-					let ord = $(".game1").index(this);
-					if(arr[ord]==0){
-						moveRight(ord);
-					}else if(arr[ord]==1){
-						moveLeft(ord);
-					}
-				});
-				$('#shadiao').click(function(){
-					$('#box0').css('display','none');
-					$('#shadiao').css('display','none');
-				})
-				
-			});
-			
-			function moveRight(ord){
-				$(".game0").stop(true);
-				for(let i=ord+1;i<5;i++){
-					$(".game0").eq(i).animate({"left":(976-(5-i)*85)+"px"},1000);	
-					arr[i]=1;
-				}
-			}
-				
-			function moveLeft(ord){
-				$(".game0").stop(true);
-				for(let i=1;i<=ord;i++){
-					$(".game0").eq(i).animate({"left":(i*85)+"px"},1000);
-					arr[i]=0;	
-				}
-			}
-			
-			</script>
 			<div class="dogya"></div>
 			<div class="w foot">
 					<ul class="l">
@@ -934,3 +817,5 @@
 	</body>
 	
 </html>
+<script>
+</script>

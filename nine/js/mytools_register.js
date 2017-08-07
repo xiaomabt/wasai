@@ -1,4 +1,4 @@
-	$(function(){
+require(['jquery-1.8.3.min'],function(){
 		//UL二维码的出现消失
 		$('.wowsai').mousemove(function(){
 			$('.ewm').css('display','block');
@@ -13,34 +13,6 @@
 		$('#weixinma').mouseout(function(){
 			$('#weixin2').css('display','none');
 		})
-		//FIX二维码的出现消失
-		/*$('#weixinma')[0].onmousemove=function(){
-			$('#weixin2')[0].style.display="block";
-		}
-		$('#weixinma')[0].onmouseout=function(){
-			$('#weixin2')[0].style.display="none";
-		}*/
-	
-		/*<script>
-	  var jq = $.noConflict(); 
-				jq('#pppq').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#qqqp').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#pppq').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-				jq('#qqqp').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-			  
-   </script>*/
-		
-		
 		window.onscroll = function(){ 
 			//顶部隐藏
 			let scrolltop=document.body.scrollTop + document.documentElement.scrollTop;
@@ -172,30 +144,33 @@
 			}
 			
 		});
-			
-		
-	});
-	function $q(id){
-		return document.getElementById(id);
-	}
-	function move8(obj,target){//运动对象和目标值
-		clearInterval(obj.timer);//清除定时器
-		obj.timer=setInterval(function(){//开启定时器
-			let curt=getStyle(obj,"opacity")*100;//去的当前值
-			let speed=(target-curt)/10;//计算速度
-			speed=(speed>0)?Math.ceil(speed):Math.floor(speed);//速度取整
-			if(target==curt){//判断目标是否达到
-				clearInterval(obj.timer);//清除定时器
-			}else{
-				obj.style["opacity"]=(curt+speed)/100;//赋值
-				obj.style["filter"]=`alpha(opacity:${curt+speed})`;
+	for(let i=0;i<$('input').length;i++){
+				$('input')[i].onfocus=function(){
+					$('input')[i].style.border='2px solid #00cbcc';
+				}
+				$('input')[i].onblur=function(){
+					$('input')[i].style.border='2px solid #ccc';
+				}
 			}
-		},30);
-	}
-	function getStyle(obj,attrName){
-		if(obj.currentStyle){
-			return obj.currentStyle[attrName];
-		}else{
-			return window.getComputedStyle(obj,false)[attrName];
-		}
-	}
+	});
+	function poor(){
+				var arr="";
+				var x;
+				while(true){
+					x=parseInt(Math.random()*173);
+					if(x>=97 && x<=122){
+					arr+=String.fromCharCode(x);
+					}
+					if(x>=65 && x<=90){
+					arr+=String.fromCharCode(x);
+					}
+					if(x>=0 && x<=9){
+					arr+=x.toString();
+					}
+					if(arr.length>=4){
+						break;
+					}
+				}
+				 document.getElementById("box22").innerHTML=arr;
+				 
+			}	

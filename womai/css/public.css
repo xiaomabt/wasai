@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* CSS Document */
+/*====================清间距===============================*/
+body, h1, h2, h3, h4, h5, h6, a, p, input, img, ul, ol, li, dl, dd, dt, figure, figcaption {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font: 12px/1.5 "微软雅黑";
+  background: #fff; }
+
+img {
+  border: 0;
+  display: block; }
+
+input, textarea {
+  outline: none; }
+
+* {
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+nav, footer, header, main, aside, figure, figcaption, section, article {
+  display: block; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: #3e3e3e; }
+
+/*=============header====================*/
+header {
+  width: 100%;
+  position: relative; }
+  header img {
+    width: 100%;
+    height: 100%; }
+  header #head {
+    width: 100%;
+    background: url("../img/mask.png") no-repeat;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    background-size: 100% 110%;
+    height: 70px; }
+    header #head a {
+      color: #fff;
+      display: inline-block;
+      font-size: 15px;
+      position: absolute;
+      left: 5px;
+      top: 14px;
+      width: 52px;
+      text-align: left;
+      overflow: hidden;
+      height: 20px; }
+      header #head a span {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        background: url("../img/a_d_03.png") no-repeat;
+        background-size: 100% 100%;
+        width: 15px;
+        height: 7px; }
+    header #head .head_ {
+      padding: 8px 8px 8px 68px;
+      line-height: 40px; }
+      header #head .head_ .head__ {
+        position: relative;
+        padding-right: 48px;
+        overflow: hidden;
+        height: 100%; }
+      header #head .head_ .head_1 img {
+        width: 20px;
+        height: 15px;
+        display: inline-block;
+        position: absolute;
+        z-index: 100;
+        left: 2px;
+        top: 14px; }
+      header #head .head_ .head_2 {
+        height: 40px; }
+        header #head .head_ .head_2 input {
+          text-indent: 27px;
+          height: 40px;
+          line-height: 100%;
+          margin: 0;
+          background: rgba(255, 255, 255, 0.8);
+          font-size: 15px;
+          border: 0;
+          border-radius: 5px;
+          width: 100%; }
+      header #head .head_ .head_3 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 100%; }
+        header #head .head_ .head_3 .head_3_ {
+          color: #fff;
+          display: inline-block;
+          text-align: center;
+          border: 0;
+          width: 40px;
+          font-size: 15px;
+          line-height: 14px; }
+
+/*# sourceMappingURL=public.css.map */

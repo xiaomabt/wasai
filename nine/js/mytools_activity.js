@@ -13,33 +13,6 @@
 		$('#weixinma').mouseout(function(){
 			$('#weixin2').css('display','none');
 		})
-		//FIX二维码的出现消失
-		/*$('#weixinma')[0].onmousemove=function(){
-			$('#weixin2')[0].style.display="block";
-		}
-		$('#weixinma')[0].onmouseout=function(){
-			$('#weixin2')[0].style.display="none";
-		}*/
-	
-		/*<script>
-	  var jq = $.noConflict(); 
-				jq('#pppq').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#qqqp').mouseenter(function(){
-				
-					jq("#qqqp").css("display","block");
-				})
-				jq('#pppq').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-				jq('#qqqp').mouseout(function(){
-					jq('#qqqp')[0].style.display="none";
-				})  
-			  
-   </script>*/
-		
 		
 		window.onscroll = function(){ 
 			//顶部隐藏

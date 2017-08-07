@@ -7,8 +7,7 @@
 		<link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
 		<link type="text/css" rel="stylesheet" href="../css/style_register.css" />
 		<link type="text/css" rel="stylesheet" href="../css/public.css" />
-		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="../js/mytools_register.js"></script>
+		<script type="text/javascript" src="../js/require.js"data-main = "../js/main_register" async="true" defer ></script>
 	</head>
 
 	<body>
@@ -210,14 +209,6 @@
 					
 					
 					<script>
-						for(let i=0;i<$('input').length;i++){
-							$('input')[i].onfocus=function(){
-								$('input')[i].style.border='2px solid #00cbcc';
-							}
-							$('input')[i].onblur=function(){
-								$('input')[i].style.border='2px solid #ccc';
-							}
-						}
 						function poor(){
 							var arr="";
 							var x;
@@ -238,22 +229,7 @@
 							}
 							 document.getElementById("box22").innerHTML=arr;
 							 
-							/*$.ajax({
-								type:"get",
-								url:"checkMa.php",
-								async:true,
-								data:"useMa="+$('#box22').html(),
-								success:function(num){
-									if(num=="1"){
-										$('#box222').html("验证码错误！");	
-									}else{
-										$('#box222').html("OK!");	
-									}
-								}
-							}); */
 						}
-						
-						
 					</script>
 					
 					

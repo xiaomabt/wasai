@@ -7,9 +7,7 @@
 		<link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
 		<link type="text/css" rel="stylesheet" href="../css/style_detail.css" />
 		<link type="text/css" rel="stylesheet" href="../css/public.css" />
-		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="../js/cookieTools.js" ></script>
-		<script type="text/javascript" src="../js/mytools_detail.js"></script>
+		<script type="text/javascript" src="../js/require.js" data-main = "../js/main_detail" async="true" defer></script>
 	</head>
 
 	<body>
@@ -34,14 +32,14 @@
 			<div class="box2">	
 				<ul class="w">
 					<li class="l home first"><a href="#"></a></li>
-					<li class="l"><a href="#">市集</a></li>
-					<li class="l"><a href="#">新品</a></li>
-					<li class="l"><a href="#">热卖</a></li>
-					<li class="l"><a href="#">闪购</a></li>
+					<li class="l"><a href="list.html">市集</a></li>
+					<li class="l"><a href="list.html">新品</a></li>
+					<li class="l"><a href="list.html">热卖</a></li>
+					<li class="l"><a href="list.html">闪购</a></li>
 					<li class="l dingzhiyuan"><a href="#">定制</a></li>
 					<li class="r search"><input type="text" style="height: 43px;" placeholder="请输入要搜索的关键字"/></li>
-					<li class="r"><a href="#">画报</a></li>
-					<li class="r first"><a href="#">动态</a></li>
+					<li class="r"><a href="activity.html">画报</a></li>
+					<li class="r first"><a href="activity.html">动态</a></li>
 				</ul>
 				
 				<div class="dingzhi">
@@ -591,7 +589,21 @@
 					
 				</div>	
 			</div>
-			
+			<script>
+				//选项卡
+					function xuanze(date){
+						let arr=$('.pin_jia').children();
+						for(var i=0;i<arr.length;i++){
+							arr[i].className="";
+						}
+							arr[date-1].className="detail_01";
+						let arr1=$('.nima').children();
+						for(var i in arr1){
+							arr1[i].className="haha";
+						}
+							arr1[date-1].className="";
+					}
+			</script>
 			<div class="dogya"></div>
 			<div class="w foot">
 					<ul class="l">

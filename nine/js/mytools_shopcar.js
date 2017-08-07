@@ -96,9 +96,7 @@
 		
 			
 	});
-	function $q(id){
-		return document.getElementById(id);
-	}
+	
 	function time(){
 			let date1=new Date();
 			let date2=new Date("2017-9-1");

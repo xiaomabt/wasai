@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+/*====================清间距===============================*/
+body,h1,h2,h3,h4,h5,h6,a,p,input,img,ul,ol,li,dl,dd,dt,figure,figcaption{
+  padding:0;
+  margin:0;
+}
+body{
+  font:12px/1.5 "微软雅黑";
+  background:#eee;
+}
+img{
+  border:0;
+  display:block;
+}
+input,textarea{
+  outline:none;
+}
+*{ box-sizing:border-box;}
+ol,ul{ list-style:none;}
+nav,footer,header,main,aside,figure,figcaption,section,article{
+  display:block;
+}
+body,html{
+  width:100%;
+  height:100%;
+}
+a{ text-decoration:none;
+  color:#3e3e3e;
+}
+/*======================header=========================*/
+header{
+  width: 100%;
+  height: 43px;
+  border-bottom: 1px solid #b5b5b5;
+  position: relative;
+  background-color: #fff;
+  .head_1{
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    width: 50px;
+    height: 20px;
+    overflow: hidden;
+    padding-left: 17px;
+    background: url(../img/s-bg2.png) no-repeat;
+    background-size: 60px 700px;
+    background-position: -44px -157px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+  }
+  h1{
+    font-size: 18px;
+    font-weight: normal;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+}
+
+/*======================nav=========================*/
+nav{
+  width: 100%;
+  height: 43px;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #b5b5b5;
+  h1{
+    font-size: 18px;
+    font-weight: normal;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+  .head_2{
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    padding-top: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+/*======================footer=========================*/
+main{
+  background: #fff;
+  .mainer {
+    width: 95%;
+    margin: 0 auto;
+    .onlyone {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px dashed #E3E3E3;
+      div:first-child{
+        width: 60px;
+        height: 60px;
+        margin-right: 5px;
+        img{
+          width: 100%;
+          height: 100%;
+          border: 1px solid #eee;
+        }
+      }
+      div:last-child{
+        height: auto;
+        width: auto;
+        span{
+          font-size: 14px;
+
+          em{
+            background: url(../img/s-bg2.png) no-repeat;
+            background-size: 60px 700px;
+            display: inline-block;
+            background-position: -44px -48px;
+            width: 12px;
+            height: 12px;
+            margin: 0 3px 0 3px;
+            vertical-align: middle;
+
+          }
+        }
+      }
+      .spp{
+        width: 40px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        p{
+          width: 50%;
+        }
+        p:first-child em{
+          font-style: normal;
+          color: #e80000;
+        }
+      }
+    }
+  }
+  .gochu{
+    width: 98%;
+    margin: 0 auto;
+    .gochu_1{
+      width: 100%;
+      height: 60px;
+      border-bottom: 1px dashed #E3E3E3;
+      position: relative;
+      a{
+        color: #333;
+        font-size: 14px;
+        display: inline-block;
+        width: 80%;
+        margin-left: 40px;
+      }
+      .gochu_2{
+        display: block;
+        width: 5px;
+        height: 10px;
+        position: absolute;
+        top: 42%;
+        right: 10px;
+        background: url(../img/s-bg.png) no-repeat;
+        background-position: 0 -66px;
+        background-size: 20px 350px;
+      }
+      .gochu_3{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background: url(../img/s-bg2.png) no-repeat;
+        background-size: 60px 700px;
+        background-position: 0 -63px;
+      }
+    }
+  }
+  .jiesuan{
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px dashed #E3E3E3;
+    .jiesuan_2{
+      width: 95%;
+      height: 100%;
+      margin: 0 auto;
+      .jiesuan_1{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 3px 0 3px;
+        vertical-align: middle;
+        background: url(../img/s-bg2.png) no-repeat;
+        background-size: 60px 700px;
+        background-position: -44px -48px;
+      }
+      .fon{
+        width: 100%;
+        height: 3px;
+        display: inline-block;
+      }
+      span em{
+        font-style: normal;
+        color: #e80000;
+        font-size: 14px;
+      }
+    }
+  }
+  .ters{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    div{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a{
+      width: 90%;
+      height: 80%;
+      display: block;
+      background: #ff8143;
+      text-align: center;
+      line-height: 36px;
+      font-size: 16px;
+      color: #fff;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+
+/*======================footer=========================*/
+footer{
+  background: #eee;
+  position: relative;
+  .f_one{
+    height: 30px;
+    padding: 5px 8px 0 8px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .f_four{
+    padding: 8px 0 15px 0;
+    text-align: center;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    ul{
+      width: 70%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      li{
+        a{
+          width: auto;
+          margin: 0 -20px;
+          height: 100%;
+          padding: 0 10px;
+          display: block;
+          background: #fff;
+          border-radius: 5px;
+          font-size: 14px;
+          line-height: 33px;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+  }
+  .last{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    .gerr{
+      color: #3daae3;
+    }
+    p{
+      line-height: 20px;
+      font-size: 14px;
+      margin-top: 5px;
+      span.eerr{
+        background: url("../img/icpno.png");
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        line-height: 20px;
+
+      }
+    }
+  }
+  .hello{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hello_1{
+    position: fixed;
+    bottom: 130px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/s-bg-pop-mai1.png") no-repeat center ;
+    background-color: rgba(151,197,49,0.8);
+    border-radius: 50%;
+    background-size: 21px 21px;
+    z-index: 10;
+  }
+  .hello_2{
+    background: url("../img/s-bg-quick.png") no-repeat;
+    background-size: 170px 170px;
+    width: 170px;
+    height: 170px;
+    position: fixed;
+    bottom: 65px;
+    left: -200px;
+    .a_one{
+      position: absolute;
+      display: inline-block;
+      width: 24px;
+      height: 23px;
+      left: 73px;
+      top: 73px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -398px;
+      background-size: 60px 700px;
+    }
+    .a_2{
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      left: 44px;
+      top: 32px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -287px;
+      background-size: 60px 700px;
+    }
+    .a_3{
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      left: 107px;
+      top: 31px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -308px;
+      background-size: 60px 700px;
+    }
+    .a_4{
+      position: absolute;
+      display: inline-block;
+      width: 25px;
+      height: 21px;
+      left: 122px;
+      top: 91px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -353px;
+      background-size: 60px 700px;
+    }
+    .a_5{
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      left: 78px;
+      top: 126px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -376px;
+      background-size: 60px 700px;
+    }
+    .a_6{
+      position: absolute;
+      display: inline-block;
+      width: 22px;
+      height: 20px;
+      left: 24px;
+      top: 90px;
+      background: url(../img/s-bg2.png) no-repeat;
+      background-position: 0 -331px;
+      background-size: 60px 700px;
+
+    }
+  }
+}

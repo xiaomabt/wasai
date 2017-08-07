@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我买网</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="../img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <a class="head_1" href="#">返回</a>
+            <h1>注册</h1>
+        </div>
+    </header>
+    <nav>
+        <form>
+            <ol class="outter">
+                <li><span class="inner">手机号：</span><input type="text" name="userName" placeholder="请输入手机号"></li>
+                <li><span class="inner inner1">验证码：</span><input type="text" name="codeNum" placeholder="请输入验证码" onclick="poor()"><span onclick="poor()" id="hii" >点击获取</span></li>
+                <li><span class="inner inner1">手机验证码：</span><input type="password" name="passWord" placeholder="请输入验证码" class="special"><span class="special_1">获取验证码</span></li>
+            </ol>
+            <div class="iis">
+                <p>手机注册更方便，无需账号绑定。</p>
+                <p>已绑定我买网账号手机号码不支持注册、绑定。 </p>
+                <p>手机号可直接登录我买网。</p>
+            </div>
+            <div class="login">
+                <input type="submit" value="下一步">
+            </div>
+        </form>
+
+    </nav>
+        <script>
+            function poor(){
+                var arr="";
+                var x;
+                while(true){
+                    x=parseInt(Math.random()*173);
+                    if(x>=97 && x<=122){
+                        arr+=String.fromCharCode(x);
+                    }
+                    if(x>=65 && x<=90){
+                        arr+=String.fromCharCode(x);
+                    }
+                    if(x>=0 && x<=9){
+                        arr+=x.toString();
+                    }
+                    if(arr.length>=4){
+                        break;
+                    }
+                }
+                document.getElementById("hii").innerHTML=arr;
+            }
+        </script>
+    <main>
+
+
+    </main>
+    <footer>
+        <div class="f_one">
+            <div class="f_two">
+                <a href="#">登录</a>丨
+                <a href="#">注册</a>
+            </div>
+            <div class="f_three">
+                <a href="#">反馈</a>丨
+                <a class="helloo" href="javascript:">回顶部</a>
+            </div>
+        </div>
+        <div class="f_four">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">购物车</a></li>
+                <li><a href="#">我的小买</a></li>
+            </ul>
+        </div>
+        <div class="last">
+            <p class="gerr"> 下载iphone客户端　|　下载android客户端</p>
+            <p class="gerr">触屏版　|　电脑版</p>
+            <p>客服电话 <span class="gerr">400-005-5678</span></p>
+            <p><span class="eerr"></span>&nbsp;京公网安备 11010102000458号</p>
+        </div>
+    </footer>
+</body>
+</html>

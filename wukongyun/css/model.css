@@ -1,0 +1,639 @@
+@charset "utf-8";
+/* CSS Document */
+/*==============================样式重置==============================*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,figure,figcaption{
+    padding:0;
+    margin:0;
+}
+img{
+    display:block;
+    border:0;
+}
+input{
+    outline:none;
+}
+ul,ol{
+    list-style:none;
+}
+header,footer,nav,main,section,aside,article,figure,figcaption{
+    display:block;
+}
+body{
+    font-size:12px;
+    color:#3e3e3e;
+    font-family:"微软雅黑";
+    background:#fff;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+a:hover{
+    color:#e36c00;
+}
+/*=================================font===============================*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*=============================header===========================*/
+header{
+    width: 100%;
+    height: 65px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+header #head{
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header #head #yun a{
+    height: 100%;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #head #yun img{
+    height: 48px;
+}
+header #head i{
+    display: none;
+    line-height: 46px;
+    margin-right: 50px;
+    font-size: 22px;
+    color: #fff;
+}
+header #head #inner{
+    height: 100%;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+header #head #inner li a{
+    display: block;
+    padding: 0 15px;
+    font-size: 16px;
+    height: 63px;
+    line-height: 63px;
+}
+header #head #inner li a:hover{
+    background: rgba(71, 60, 60, 0);
+    border-bottom: 1px solid #e36c00;
+    background: #222;
+}
+header #head #inner li#outer a:hover{
+    border-bottom:0;
+}
+header #head #inner li#outer{
+    position: relative;
+}
+header #head #inner li#outer span#load{
+    display: inline-block;
+    position: absolute;
+    width: 94px;
+    height: 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+    display: none;
+}
+header #head #inner li#outer span#load:hover{
+    background: #eee;
+}
+
+
+
+
+/*===================nav=============================*/
+nav{
+    height: 511px;
+    width: 100%;
+    background: url("../img/5481cb032f39e243f64ab32ad6135448.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+nav #image{
+    margin-top: 13%;
+    display: flex;
+    flex-direction: column;
+}
+nav #image p{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin: 10px 0;
+}
+nav #image p:first-child{
+    font-size: 34px;
+}
+nav #image span{
+    display: flex;
+    justify-content: center;
+}
+nav #image span a{
+    font-size: 18px;
+    background: #e36c00;
+    text-align: center;
+    width: 124px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    margin: 10px 0;
+}
+nav #image span a:hover{
+    background: #e36c62;
+}
+/*=================================main=============================*/
+main{
+    background: #eee;
+}
+main #x_buff{
+    width: 100%;
+    height: 236px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+main #x_buff #x_buff_1{
+    width: 95%;
+    height: 100%;
+    background: #fff;
+}
+main #x_buff #x_buff_1 .x_buff_2{
+    width: 99%;
+    height: 40%;
+    margin: 10px;
+}
+main #x_buff #x_buff_1 .x_buff_2 h4{
+    font-size: 20px;
+    padding: 10px 0;
+}
+main #x_buff #x_buff_1 .x_buff_2 ul{
+    display: flex;
+    margin-top: 0px;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+main #x_buff #x_buff_1 .x_buff_2 ul li{
+    margin: 0 10px;
+}
+
+main #x_buff #x_buff_1 .x_buff_2 ul li a{
+    display: block;
+    padding: 5px;
+    color: #333;
+}
+main #x_buff #x_buff_1 .x_buff_2 ul li a.first-child{
+    background: #27c24c;
+    border-radius: 5px;
+    color: #fff;
+}
+main #x_buff #x_buff_1 .x_buff_2 ul li a:hover{
+    background: #eee;
+    border-radius: 5px;
+}
+main #bobo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+main #bobo ul{
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main #bobo ul li{
+    width: 22%;
+    height: 380px;
+    background: #fff;
+    margin: 20px 0;
+}
+main #bobo ul li .one_{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    background: url("../img/1500349694230.png") no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+main #bobo ul li .one_11{
+    background: url("../img/1500288082051.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_12{
+    background: url("../img/1499948769062.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_13{
+    background: url("../img/1499689616800.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_14{
+    background: url("../img/1499171169694.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_15{
+    background: url("../img/1499170959763.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_16{
+    background: url("../img/1498720040671.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_17{
+    background: url("../img/1498720229363.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_18{
+    background: url("../img/1498720661602.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_19{
+    background: url("../img/1498720680979.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_20{
+    background: url("../img/1498720702432.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_21{
+    background: url("../img/1498720721030.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_22{
+    background: url("../img/1498720744072.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_23{
+    background: url("../img/1498720789403.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_24{
+    background: url("../img/1498720802357.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_25{
+    background: url("../img/1498720818234.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_26{
+    background: url("../img/1498720851511.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_27{
+    background: url("../img/1498720871315.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_28{
+    background: url("../img/1498720939730.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_29{
+    background: url("../img/1498720958149.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_30{
+    background: url("../img/1498720975313.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_31{
+    background: url("../img/1498721005442.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_32{
+    background: url("../img/1498721037132.png") no-repeat;
+    background-size: cover;
+}
+main #bobo ul li .one_33{
+    background: url("../img/1498721143815.png") no-repeat;
+    background-size: cover;
+}
+
+main #bobo ul li .two_{
+    height: 35%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main #bobo ul li .two_ .two_1{
+    width: 80%;
+    height: 40%;
+    font-size: 20px;
+    padding-top: 10%;
+}
+main #bobo ul li .two_ .two_2{
+    width: 80%;
+    height: 20%;
+    font-size: 14px;
+}
+
+main #bobo ul li .three_{
+    height: 15%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main #bobo ul li .three_ .three_1{
+    width: 30%;
+    height: 50%;
+    font-size: 20px;
+    color: #55a532;
+}
+main #bobo ul li .three_ .three_2 a{
+    display: inline-block;
+    padding: 5px 8px;
+    background: #55a532;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 16px;
+}
+main #bobo ul li .three_ .three_2 a:first-child{
+    background: #fff;
+    color: #333;
+}
+main #bobo ul li .three_ .three_2 a:last-child{
+    color: #fff;
+}
+main #click{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #click #click_{
+    width: 40%;
+    height: 30%;
+}
+main #click #click_ ul{
+    display: flex;
+    height: 100%;
+}
+main #click #click_ ul li{
+    width: 13%;
+    height: 100%;
+    text-align: center;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 40px;
+    cursor: pointer;
+}
+main #click #click_ ul li:nth-child(3){
+    background: #5cb85c;
+}
+main #click #click_ ul li:hover{
+    background: #55a532;
+}
+
+
+
+
+
+
+
+
+
+
+main .qqzx{
+    position: fixed;
+    left: 0px;
+    bottom: 200px;
+    z-index: 10;
+}
+
+/*===================footer=============================*/
+footer{
+    height: 106px;
+    width: 100%;
+}
+footer #foot{
+    height: 66%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer #foot p{
+    color: #ccc;
+    font-size: 14px;
+}
+footer #footr{
+    height: 44%;
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer #footr p{
+    font-size: 14px;
+}
+#celan{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+#celan ul{
+    position: fixed;
+    top: 46px;
+    right: 0;
+    width: 250px;
+    height: 400px;
+    background: #000;
+}
+#celan ul li{
+    margin: 10px 20px;
+    font-size: 20px;
+    color: #ccc;
+    border-bottom: 1px solid #888;
+    cursor: pointer;
+}
+/*===================侧边=============================*/
+#guding{
+    width: 34px;
+    height: 78px;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+}
+#guding div{
+    cursor: pointer;
+    position: absolute;
+}
+#guding div:last-child{
+    bottom: 0;
+}
+#weixin{
+    width: 200px;
+    height: 380px;
+    position: fixed;
+    right: -210px;
+    bottom: 74px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px #ccc;
+    z-index: 100;
+}
+#weixin .box{
+    height: 38px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background: #5cb85c;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#weixin .box div{
+    height: 25px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#weixin .box div a{
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+#weixin .box div img{
+    display: inline-block;
+    cursor: pointer;
+}
+#weixin .box1{
+    height: 33px;
+    width: 198px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    background: #eee;
+}
+#weixin .box1 span{
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background: url(../img/userInfo.gif) 0px -48px;
+}
+#weixin .box1:hover span{
+    background-position: 0 -60px;
+}
+#weixin .box2{
+    height: 76px;
+    width: 198px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+#weixin .box2 img{
+    margin: 8px auto;
+}
+#weixin .box3{
+    height: 231px;
+    width: 198px;
+    border-radius:  0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#weixin .box3 img{
+    height: 169px;
+    width: 169px;
+    margin: 10px auto;
+}
+/*===================媒体查询=============================*/
+@media screen and (max-width: 1210px){
+    header #head #inner> li > a{padding: 0 13px}
+    nav{  height: 500px;}
+    main #bobo ul li{  width: 30%;}
+}
+
+@media screen and (max-width: 1050px){
+    header #head #inner> li > a{padding: 0 10px}
+    nav{  height: 450px;}
+    main .tedian{ height: 100px;}
+    main .tedian p{ font-size: 26px;}
+    footer{  height: 96px;}
+}
+
+@media screen and (max-width: 990px){
+    header #head #inner> li > a{padding: 0 6px}
+    nav{  height: 400px;}
+    footer{  height: 86px;}
+    main .qqzx img{  height: 130px;  }
+    main #x_buff{  height: 256px;}
+    main #bobo ul li{  width: 45%;}
+
+}
+
+@media only screen and (max-width:800px) {
+    header {height: 46px;position: fixed;top: 0;z-index: 10 }
+    header #head #yun img { height: 23px;}
+    header #head i{display: block;  cursor: pointer}
+    header #head #inner{ display: none;}
+    nav{  height: 360px;}
+    main .tedian{ height: 80px;}
+    main .tedian p{ font-size: 22px;}
+    main #nine{ height: auto;}
+    main #nine ul{ border: none; }
+    main #nine ul li{border: none; }
+    main #nine ul li a{ margin: 10px}
+    main #one ul li img{  width: 100%; height: 60%; }
+    main #two{  height: 350px;  }
+    footer{  height: 76px;}
+    main #eleven{  height: 180px;}
+    main .qqzx img{  height: 100px;  }
+    main #x_buff #x_buff_1 .x_buff_2 {  height: 22%;}
+}
+
+@media only screen and (max-width:640px) {
+    main #nine ul li{  width: 50%; }
+    main #nine{ height: auto;}
+    main #ten ul{ flex-direction: column}
+    main #ten ul li{  width: 100%; flex-wrap: wrap;}
+    main #ten{  height: 200px;}
+    main #one ul li{  width: 50%;flex-wrap: wrap}
+    main #one ul li img{  width: 100%; height: 70%; }
+    main #two{  height: auto; }
+    main .three{  height: 100px;}
+    main .three a{  font-size: 14px;  width: 100px;  height:46px; line-height: 46px}
+    main #eleven{  height: 130px;}
+    main .qqzx img{  height: 80px;  }
+    main #x_buff{  height: auto;}
+    main #bobo ul li{  width: 100%;}
+    main #bobo ul li{  height: 580px;}
+    main #click #click_{  width: 90%;}
+}
