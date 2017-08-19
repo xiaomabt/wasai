@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+/*========================header==========================*/
+header{
+  height: 45px;
+  width:100%;
+  padding: 7px 10px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  display:flex;
+  z-index: 10;
+  position: fixed;
+  top:0;
+  .head_box1{
+    width:15%;
+    height:100%;
+    span{
+      font-size: 14px;
+      color: #d30775;
+      line-height:31px;
+      position: relative;
+    }
+    span::after{
+      content:"";
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid #d30775;
+      border-right: 1px solid #d30775;
+      transform: rotate(135deg);
+      position: absolute;
+      top: 5px;
+      right: -12px;
+    }
+  }
+  .head_box2{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    p{
+      margin-left: 40%;
+    }
+  }
+}
+
+/*========================================nav============================*/
+nav{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #fff;
+  top:45px;
+  ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    li{
+      width: 33.3%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        height: 100%;
+        line-height: 50px;
+        font-size: 16px;
+        color: #999;
+        border-bottom: 2px solid #fff;
+      }
+    }
+    li:first-child{
+      a{
+        color: #d32382;
+        border-bottom: 2px solid #d32382;
+      }
+    }
+  }
+}
+/*========================================main============================*/
+main{
+  width: 100%;
+  height: auto;
+  .fister{
+    width: 100%;
+    height: 70px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .box1{
+    width: 100%;
+    height: auto;
+    .box1_1{
+      width: 100%;
+      height: 174px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .box1_2{
+      width: 100%;
+      height: 60px;
+      padding: 0 10px;
+      padding-top: 10px;
+      p{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-size: 16px;
+      }
+    }
+    .inner{
+      width: 100%;
+      height: 60px;
+      display: flex;justify-content: center;
+      .inner_1{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        span{
+          line-height: 60px;
+          color: #d32382;
+          font-size: 14px;
+          i{
+            font-style: normal;
+            font-size: 18px;
+          }
+        }
+        span:last-child{
+          color: #333;
+          .james{
+            line-height: 70px;
+            em{
+              color: #d32382;
+            }
+          }
+          .jamess{
+            height: 80%;
+            display: inline-block;
+            line-height: 48px;
+            background: #d32382;
+            border-radius: 5px;
+            color: #fff;
+          }
+        }
+      }
+
+    }
+  }
+  .box2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    .box2_1{
+      width: 90%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      span{
+        width: 50px;
+        height: 30px;
+        margin-top: 10px;
+        border: 1px solid #d32382;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        color: #d32382;
+        font-weight: bold;
+      }
+    }
+    div{
+      font-size: 16px;
+      line-height: 50px;
+      i{
+        color: #d32382;
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+
+/*========================================footer============================*/
+footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  ul{
+    width: 100%;
+    height: 45px;
+    background: #fafafa;
+    display: flex;
+    li{
+      width: 20%;
+      height: 100%;
+      font-size: 16px;
+      a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .fa{
+          font-size: 26px;
+          color: #111111;
+        }
+        p{
+          color: #111111;
+        }
+      }
+    }
+    li:nth-child(2) a .fa,li:nth-child(2) a p{
+      color: #f25bae;
+    }
+  }
+}
+

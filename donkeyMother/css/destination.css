@@ -1,0 +1,260 @@
+/* CSS Document */
+/*========================header==========================*/
+header {
+  height: 45px;
+  width: 100%;
+  padding: 7px 10px;
+  overflow: hidden;
+  background-color: #fafafa;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  border-bottom: 1px solid #aaa;
+  top: 0; }
+  header .head_box1 {
+    width: 15%;
+    height: 100%; }
+    header .head_box1 span {
+      font-size: 14px;
+      color: #d30775;
+      line-height: 31px;
+      position: relative; }
+    header .head_box1 span::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid #d30775;
+      border-right: 1px solid #d30775;
+      transform: rotate(135deg);
+      position: absolute;
+      top: 5px;
+      right: -12px; }
+  header .head_box2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold; }
+    header .head_box2 p {
+      margin-left: 40%; }
+
+.gai {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 45px;
+  background: #efeff7;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .gai .bate {
+    width: 90%;
+    height: 70%;
+    background: #fff;
+    display: flex;
+    border: 1px solid #ccc; }
+    .gai .bate span {
+      width: 100px;
+      height: 100%;
+      text-align: center;
+      line-height: 35px;
+      color: #d30775;
+      font-size: 16px;
+      position: relative; }
+    .gai .bate span.xian:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      transform: rotate(135deg);
+      border-top: 1px solid #d30775;
+      border-right: 1px solid #d30775;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+    .gai .bate .flower {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      .gai .bate .flower span:first-child {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        border-left: 1px solid #aaa; }
+        .gai .bate .flower span:first-child img {
+          width: 20px;
+          height: 20px; }
+      .gai .bate .flower span:last-child {
+        width: 70%;
+        height: 80%;
+        display: flex; }
+        .gai .bate .flower span:last-child input {
+          width: 100%;
+          height: 100%; }
+
+/*========================nav==========================*/
+nav {
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+  nav .swiper-container {
+    width: 90%;
+    height: 90%; }
+    nav .swiper-container .swiper-wrapper .swiper-slide img {
+      width: 100%;
+      height: 100%; }
+
+/*========================main==========================*/
+main {
+  width: 100%;
+  height: auto; }
+  main .love {
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    display: flex;
+    justify-content: center; }
+    main .love ul {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      main .love ul li {
+        width: 25%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        main .love ul li span {
+          font-size: 14px;
+          color: #888; }
+  main .ermen {
+    width: 100%;
+    height: auto;
+    margin-top: 10px; }
+    main .ermen .destination {
+      height: 50px;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center; }
+      main .ermen .destination .leftright {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between; }
+        main .ermen .destination .leftright span {
+          line-height: 50px;
+          font-size: 16px;
+          color: #888; }
+        main .ermen .destination .leftright span:last-child {
+          font-size: 15px;
+          color: #d30775;
+          position: relative;
+          margin-right: 20px; }
+        main .ermen .destination .leftright span:last-child::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          transform: rotate(135deg);
+          border-top: 1px solid #d30775;
+          border-right: 1px solid #d30775;
+          position: absolute;
+          top: 17px;
+          right: -18px; }
+    main .ermen ul {
+      width: 100%;
+      height: 100px;
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap; }
+      main .ermen ul li {
+        width: 20%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        main .ermen ul li a {
+          width: 80%;
+          height: 60%;
+          text-align: center;
+          line-height: 30px;
+          background: #f3f3f3;
+          border-radius: 15px;
+          color: #888;
+          font-size: 14px; }
+      main .ermen ul li:first-child a {
+        background: #d30775;
+        color: #fff; }
+  main .all {
+    width: 100%;
+    height: auto;
+    background: #fff; }
+    main .all .beijing {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center; }
+      main .all .beijing ul {
+        width: 100%;
+        height: auto; }
+        main .all .beijing ul li {
+          width: 100%;
+          height: 140px;
+          display: flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 2px solid #333; }
+          main .all .beijing ul li .tech {
+            width: 90%;
+            height: 80%;
+            display: flex; }
+            main .all .beijing ul li .tech div {
+              margin-left: 20px; }
+              main .all .beijing ul li .tech div p {
+                font-size: 14px;
+                color: #aaa; }
+              main .all .beijing ul li .tech div p:first-child {
+                font-size: 18px;
+                color: #111;
+                font-weight: bold; }
+
+/*========================================footer============================*/
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto; }
+  footer ul {
+    width: 100%;
+    height: 45px;
+    background: #fafafa;
+    display: flex; }
+    footer ul li {
+      width: 20%;
+      height: 100%;
+      font-size: 16px; }
+      footer ul li a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        footer ul li a .fa {
+          font-size: 26px;
+          color: #111111; }
+        footer ul li a p {
+          color: #111111; }
+    footer ul li:nth-child(3) a .fa, footer ul li:nth-child(3) a p {
+      color: #f25bae; }
+
+/*# sourceMappingURL=destination.css.map */

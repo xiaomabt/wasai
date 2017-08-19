@@ -1,0 +1,163 @@
+/* CSS Document */
+/*========================header==========================*/
+header {
+  width: 100%;
+  height: auto; }
+  header a {
+    width: 100%;
+    height: 200px;
+    background: #fff; }
+    header a img {
+      width: 100%;
+      height: 100%; }
+
+/*========================main==========================*/
+main .vinida {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  justify-content: center;
+  display: flex; }
+  main .vinida .dancing {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; }
+    main .vinida .dancing span {
+      height: 100%;
+      line-height: 60px;
+      font-size: 18px;
+      font-weight: bold; }
+    main .vinida .dancing span:last-child {
+      color: #888;
+      position: relative;
+      margin-right: 20px; }
+    main .vinida .dancing span:last-child::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      border-top: 2px solid #666;
+      border-right: 2px solid #666;
+      position: absolute;
+      top: 40%;
+      right: -15px; }
+main .drink {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc; }
+  main .drink ul {
+    width: 90%;
+    height: 70%;
+    display: flex; }
+    main .drink ul li {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      height: 100%;
+      justify-content: center;
+      align-items: center; }
+      main .drink ul li span {
+        font-size: 16px; }
+main .follow {
+  width: 100%;
+  margin-top: 10px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center; }
+  main .follow .queendom {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    main .follow .queendom span {
+      font-size: 16px;
+      margin-left: 10px; }
+  main .follow .queendom::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #888;
+    border-right: 2px solid #888;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 40%;
+    right: 10px; }
+main .yeah {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  margin-top: 10px; }
+  main .yeah ul {
+    width: 90%;
+    height: auto; }
+    main .yeah ul li {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #aaa; }
+      main .yeah ul li .queendom {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative; }
+        main .yeah ul li .queendom span {
+          font-size: 16px;
+          margin-left: 10px; }
+      main .yeah ul li .queendom::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #888;
+        border-right: 2px solid #888;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 40%;
+        right: 10px; }
+    main .yeah ul li:last-child {
+      border-bottom: 0; }
+
+/*========================================footer============================*/
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto; }
+  footer ul {
+    width: 100%;
+    height: 45px;
+    background: #fafafa;
+    display: flex; }
+    footer ul li {
+      width: 20%;
+      height: 100%;
+      font-size: 16px; }
+      footer ul li a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        footer ul li a .fa {
+          font-size: 26px;
+          color: #111111; }
+        footer ul li a p {
+          color: #111111; }
+    footer ul li:nth-child(5) a .fa, footer ul li:nth-child(5) a p {
+      color: #f25bae; }
+
+/*# sourceMappingURL=mine.css.map */

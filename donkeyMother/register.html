@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/base.css">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        <div class="one">
+            <span>注 册</span>
+        </div>
+        <div class="three">
+            <ul>
+                <li>
+                    <span></span>
+                    <input type="text" placeholder="请输入11位手机号" >
+                </li>
+                <li>
+                    <span></span>
+                    <input type="text" placeholder="请输入验证码" >
+                    <a id="hii1" onclick="poor()"></a>
+                </li>
+                <li>
+                    <span></span>
+                    <input type="text" placeholder="请输入短信验证码" >
+                    <i>发送验证码</i>
+                </li>
+                <li>
+                    <span></span>
+                    <input type="text" placeholder="请输入密码" >
+                    <i></i>
+                </li>
+            </ul>
+        </div>
+        <div class="four">
+            <ul>
+                <li>邀请码注册</li>
+            </ul>
+        </div>
+        <div class="five">
+            <a href="loading.html">
+                <input type="button" value="注 册">
+            </a>
+        </div>
+        <div class="last">
+            <p>第三方登录</p>
+            <div>
+                <span><img src="img/lg_sina.png" alt=""></span>
+                <span><img src="img/lg_qq.png" alt=""></span>
+                <span><img src="img/lg_pay.png" alt=""></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        poor();
+    })
+        function poor(){
+            var arr="";
+            var x;
+            while(true){
+                x=parseInt(Math.random()*173);
+                if(x>=97 && x<=122){
+                    arr+=String.fromCharCode(x);
+                }
+                if(x>=65 && x<=90){
+                    arr+=String.fromCharCode(x);
+                }
+                if(x>=0 && x<=9){
+                    arr+=x.toString();
+                }
+                if(arr.length>=4){
+                    break;
+                }
+            }
+            document.getElementById("hii1").innerHTML=arr;
+        }
+
+</script>

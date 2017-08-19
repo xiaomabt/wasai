@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/* CSS Document */
+main{
+  width: 100%;
+  height: 100%;
+  background: url("../img/spokeman-4.png") no-repeat;
+  background-size: 100% 100%;
+  .one{
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    span::before{
+      content: "";
+      position: absolute;
+      left: 9%;
+      top: 50%;
+      transform: translate(-50%,-50%) rotate(-45deg);
+      width: 12px;
+      height: 12px;
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+    }
+  }
+  .two{
+    width: 100%;
+    height: auto;
+    ul{
+      height: 38px;
+      margin: 0 19px 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      overflow: hidden;
+      li{
+        color: #fff;
+        border-right: none;
+        width: 50%;
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        height: 36px;
+        line-height: 36px;
+      }
+      li:first-child{
+        background-color: #FFF;
+        color: #D30775;
+      }
+    }
+    ul::before{
+      content: '';
+      position: absolute;
+      background: url(../img/lg_cloud.png) no-repeat;
+      width: 43px;
+      height: 20px;
+      left: 18px;
+      top: 50px;
+      background-size: 100% 100%;
+    }
+  }
+  .three{
+    width: 100%;
+    height: auto;
+    ul{
+      height: 122px;
+      margin: 15px 19px 0;
+      background: #f3bad9;
+      border: 1px solid #f3bad9;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 0;
+      position: relative;
+      li{
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        margin: 0 20px;
+        border-bottom: 1px solid #aaa;
+        span{
+          top: 10px;
+          width: 18px;
+          height: 20px;
+          display: inline-block;
+          position: absolute;
+          background: url(../img/lg_person.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        input{
+          left: 34px;
+          top: 10px;
+          position: absolute;
+          height: 22px;
+          max-height: 22px;
+          width: 60%;
+          overflow: hidden;
+          background-color: #f3bad9;
+          font-size: 14px;
+          border: 0;
+        }
+      }
+      li:nth-child(2){
+        span{
+          background: url(../img/lg_lock.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        i{
+          background: url(../img/eye-grey.png) center no-repeat;
+          background-size: 30px 30px;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          font-size: 13px;
+          color: #d30775;
+          text-align: right;
+          right: 0;
+        }
+      }
+      li:nth-child(3){
+        border-bottom: 1px solid #f3bad9;
+        span{
+          background: url(../img/lg_code.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        a{
+          right: -2px;
+          display: inline-block;
+          position: absolute;
+          bottom: 3px;
+          width: 65px;
+          height: 80%;
+          font-size: 20px;
+          text-align: center;
+          line-height: 27px;
+          border: 1px solid #fff;
+          background: #fff;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    ul:last-child{
+      height: 122px;
+      margin: 15px 19px 0;
+      background: #f3bad9;
+      border: 1px solid #f3bad9;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 0;
+      position: relative;
+      li{
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        margin: 0 20px;
+        border-bottom: 1px solid #aaa;
+        span{
+          top: 10px;
+          width: 18px;
+          height: 20px;
+          display: inline-block;
+          position: absolute;
+          background: url(../img/lg_phone.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        input{
+          left: 34px;
+          top: 10px;
+          position: absolute;
+          height: 22px;
+          max-height: 22px;
+          width: 60%;
+          overflow: hidden;
+          background-color: #f3bad9;
+          font-size: 14px;
+          border: 0;
+        }
+      }
+      li:nth-child(3){
+        border-bottom: 1px solid #f3bad9;
+        span{
+          background: url(../img/lg_lock.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        i{
+          background: #d30775;
+          background-size: 30px 30px;
+          width: 70px;
+          font-style: normal;
+          border-radius: 5px;
+          height: 25px;
+          position: absolute;
+          font-size: 13px;
+          color: #fff;
+          text-align: center;
+          right: 0;
+          top:10px;
+          line-height: 25px;
+        }
+      }
+      li:nth-child(2){
+        span{
+          background: url(../img/lg_msg.png) 0 center no-repeat #f3bad9;
+          background-size: 100% 100%;
+        }
+        a{
+          right: -2px;
+          display: inline-block;
+          position: absolute;
+          bottom: 3px;
+          width: 65px;
+          height: 80%;
+          font-size: 20px;
+          text-align: center;
+          line-height: 27px;
+          border: 1px solid #fff;
+          background: #fff;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .four{
+    width: 100%;
+    height: auto;
+    ul{
+      padding: 12px 18px 18px;
+      width: 100%;
+      height: 20px;
+      li:first-child{
+        float: left;
+        text-align: left;
+        width: 50%;
+        font-size: 13px;
+        a{
+          color: #fff;
+        }
+      }
+      li:last-child{
+        float: right;
+        text-align: right;
+        width: 50%;
+        font-size: 13px;
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+  .five{
+    padding: 0 19px;
+    input{
+      background: #f8f8f8;
+      color: #D30775;
+      width: 100%;
+      height: 40px;
+      line-height: 16px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+      margin-top: 10px;
+      outline: 0;
+    }
+  }
+  .last{
+    margin: 40px auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    p{
+      margin: 0 20px 10px;
+      height: 20px;
+      line-height: 20px;
+      background: url(../img/lg_line.png) center no-repeat;
+      background-size: contain;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+    }
+    div{
+      width: 100%;
+      height: 42px;
+      display: flex;
+      span{
+        width: 33.3%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        img{
+          height: 42px;
+        }
+      }
+    }
+  }
+}

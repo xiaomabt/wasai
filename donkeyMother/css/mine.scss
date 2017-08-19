@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+/*========================header==========================*/
+header{
+  width: 100%;
+  height: auto;
+  a{
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*========================main==========================*/
+main{
+  .vinida{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    .dancing{
+      width: 95%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      span{
+        height: 100%;
+        line-height: 60px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      span:last-child{
+        color: #888;
+        position: relative;
+        margin-right: 20px;
+      }
+      span:last-child::after{
+        content: "";
+        width: 12px;
+        height: 12px;
+        transform: rotate(45deg);
+        border-top: 2px solid #666;
+        border-right: 2px solid #666;
+        position: absolute;
+        top: 40%;
+        right: -15px;
+      }
+    }
+  }
+  .drink{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    ul{
+      width: 90%;
+      height: 70%;
+      display: flex;
+      li{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .follow{
+    width: 100%;
+    margin-top: 10px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    .queendom{
+      width: 90%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      span{
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+    .queendom::after{
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid #888;
+      border-right:  2px solid #888;
+      transform: rotate(45deg);
+      position: absolute;
+      top:40%;
+      right: 10px;
+    }
+  }
+  .yeah{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    margin-top: 10px;
+    ul{
+      width: 90%;
+      height: auto;
+      li{
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #aaa;
+        .queendom{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+          span{
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+        .queendom::after{
+          content: "";
+          width: 12px;
+          height: 12px;
+          border-top: 2px solid #888;
+          border-right:  2px solid #888;
+          transform: rotate(45deg);
+          position: absolute;
+          top:40%;
+          right: 10px;
+        }
+      }
+      li:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+}
+/*========================================footer============================*/
+footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  ul{
+    width: 100%;
+    height: 45px;
+    background: #fafafa;
+    display: flex;
+    li{
+      width: 20%;
+      height: 100%;
+      font-size: 16px;
+      a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .fa{
+          font-size: 26px;
+          color: #111111;
+        }
+        p{
+          color: #111111;
+        }
+      }
+    }
+    li:nth-child(5) a .fa,li:nth-child(5) a p{
+      color: #f25bae;
+    }
+  }
+}

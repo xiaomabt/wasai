@@ -1,0 +1,187 @@
+/* CSS Document */
+/*========================header==========================*/
+header {
+  height: 45px;
+  width: 100%;
+  padding: 7px 10px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  top: 0; }
+  header .head_box1 {
+    width: 15%;
+    height: 100%; }
+    header .head_box1 span {
+      font-size: 14px;
+      color: #d30775;
+      line-height: 31px;
+      position: relative; }
+    header .head_box1 span::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid #d30775;
+      border-right: 1px solid #d30775;
+      transform: rotate(135deg);
+      position: absolute;
+      top: 5px;
+      right: -12px; }
+  header .head_box2 {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold; }
+    header .head_box2 p {
+      margin-left: 40%; }
+
+/*========================================nav============================*/
+nav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #fff;
+  top: 45px; }
+  nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+    nav ul li {
+      width: 33.3%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      nav ul li a {
+        height: 100%;
+        line-height: 50px;
+        font-size: 16px;
+        color: #999;
+        border-bottom: 2px solid #fff; }
+    nav ul li:first-child a {
+      color: #d32382;
+      border-bottom: 2px solid #d32382; }
+
+/*========================================main============================*/
+main {
+  width: 100%;
+  height: auto; }
+  main .fister {
+    width: 100%;
+    height: 70px; }
+    main .fister img {
+      width: 100%;
+      height: 100%; }
+  main .box1 {
+    width: 100%;
+    height: auto; }
+    main .box1 .box1_1 {
+      width: 100%;
+      height: 174px; }
+      main .box1 .box1_1 img {
+        width: 100%;
+        height: 100%; }
+    main .box1 .box1_2 {
+      width: 100%;
+      height: 60px;
+      padding: 0 10px;
+      padding-top: 10px; }
+      main .box1 .box1_2 p {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-size: 16px; }
+    main .box1 .inner {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: center; }
+      main .box1 .inner .inner_1 {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between; }
+        main .box1 .inner .inner_1 span {
+          line-height: 60px;
+          color: #d32382;
+          font-size: 14px; }
+          main .box1 .inner .inner_1 span i {
+            font-style: normal;
+            font-size: 18px; }
+        main .box1 .inner .inner_1 span:last-child {
+          color: #333; }
+          main .box1 .inner .inner_1 span:last-child .james {
+            line-height: 70px; }
+            main .box1 .inner .inner_1 span:last-child .james em {
+              color: #d32382; }
+          main .box1 .inner .inner_1 span:last-child .jamess {
+            height: 80%;
+            display: inline-block;
+            line-height: 48px;
+            background: #d32382;
+            border-radius: 5px;
+            color: #fff; }
+  main .box2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc; }
+    main .box2 .box2_1 {
+      width: 90%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between; }
+      main .box2 .box2_1 span {
+        width: 50px;
+        height: 30px;
+        margin-top: 10px;
+        border: 1px solid #d32382;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        color: #d32382;
+        font-weight: bold; }
+    main .box2 div {
+      font-size: 16px;
+      line-height: 50px; }
+      main .box2 div i {
+        color: #d32382;
+        font-style: normal;
+        font-weight: bold; }
+
+/*========================================footer============================*/
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto; }
+  footer ul {
+    width: 100%;
+    height: 45px;
+    background: #fafafa;
+    display: flex; }
+    footer ul li {
+      width: 20%;
+      height: 100%;
+      font-size: 16px; }
+      footer ul li a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        footer ul li a .fa {
+          font-size: 26px;
+          color: #111111; }
+        footer ul li a p {
+          color: #111111; }
+    footer ul li:nth-child(2) a .fa, footer ul li:nth-child(2) a p {
+      color: #f25bae; }
+
+/*# sourceMappingURL=selling.css.map */
